@@ -15,7 +15,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 3: Polygons
 ![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/3_Polygons_GlobalMortality.png)
 
-### Day 4: Hexagons (!)
+### Day 4: Hexagons
 ![./Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png)
 
 ### Day 5: Raster
