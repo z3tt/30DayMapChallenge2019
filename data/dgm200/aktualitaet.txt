@@ -1,0 +1,34 @@
+Aktualitaeten 
+
+der Ausgangsdaten des DGM5, die den DGM5 /10 /25 / 50 /200 /1000 zugrunde liegen:
+
+Bundesland Brandenburg;              2002 - 2015
+Bundesland Berlin;                   2011 - 2016
+Bundesland Hansestadt Bremen;        2012 - 2015
+Bundesland Baden-Wuerttemberg;       2000 - 2010
+Bundesland Bayern;                   2006 - 2015
+Bundesland Hessen;                   2007 - 2014
+Bundesland Hansestadt Hamburg;       2010        
+Bundesland Mecklenburg-Vorpommern;   2006 - 2015
+Bundesland Niedersachsen;            1950 - 2011
+Bundesland Nordrhein-Westfalen;      2007 - 2015
+Bundesland Rheinland-Pfalz;          2003 - 2015
+Bundesland Sachsen-Anhalt;           2009 - 2015
+Bundesland Schleswig-Holstein;       2005 - 2015
+Bundesland Sachsen;                  2005 - 2015
+Bundesland Saarland;                 2006 - 2014
+Bundesland Thueringen;               2011 - 2015
+
+Aktualitäten aller Kacheln sind zu finden in den zugehörigen Metadaten. 
+Diese werden als CSV-Dateien (öffnen z.B. mit EXCEL) von den Bundesländern geliefert.
+
+Hinweise zur Struktur der Metadaten geben die Dokumente der AdV:
+911_Technisches_Regelwerk_Datenaustausch_DGM_v11.pdf 
+adv_produktspezifikation_911R3_v21.pdf 
+
+Vom BKG wurde nachträglich aus den CSV-Dateien der Länder ein gesamter Metadatensatz im SHAPE-Format erzeugt. 
+Auch dieser kann auf Wunsch zur Verfügung gestellt werden (Größe 82 MB).
+
+
+
+

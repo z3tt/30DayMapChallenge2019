@@ -1,0 +1,25 @@
+Dieser Datenbestand steht über Geodatendienste gemäß "Geodatenzugangsgesetz (GeoZG)" 
+(http://www.geodatenzentrum.de/auftrag/pdf/geodatenzugangsgesetz.pdf) für die 
+kommerzielle und nicht kommerzielle Nutzung geldleistungsfrei zum Download und zur 
+Online-Nutzung zur Verfügung.
+ 
+Die Nutzung der Geodaten und Geodatendienste wird durch die "Verordnung zur Festlegung 
+der Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes (GeoNutzV)" 
+(http://www.geodatenzentrum.de/auftrag/pdf/geonutz.pdf) geregelt.
+ 
+Insbesondere hat jeder Nutzer den Quellenvermerk zu allen Geodaten, Metadaten und 
+Geodatendiensten erkennbar und in optischem Zusammenhang zu platzieren. 
+Veränderungen, Bearbeitungen, neue Gestaltungen oder sonstige Abwandlungen sind mit 
+einem Veränderungshinweis im Quellenvermerk zu versehen.
+
+Quellenvermerk und Veränderungshinweis sind wie folgt zu gestalten. Bei der Darstellung 
+auf einer Webseite ist der Quellenvermerk mit der URL "http://www.bkg.bund.de" zu verlinken.
+
+© GeoBasis-DE / BKG <Jahr des letzten Datenbezugs>
+© GeoBasis-DE / BKG <Jahr des letzten Datenbezugs> (Daten verändert)
+ 
+Beispiel:
+ 
+© GeoBasis-DE / BKG 2013
+ 
+
