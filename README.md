@@ -14,9 +14,13 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 3: Polygons
 ![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/3_Polygons_GlobalMortality.png)
+<br><br>
+[... and a version showing deaths due to alcohol and drug disorder](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_Alcohol_Drugs.png)
 
 ### Day 4: Hexagons
 ![./Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png)
+<br><br>
+[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex_1994.png)
 
 ### Day 5: Raster
 ![./Day5_Raster/Day5_Raster_GermanyDGM.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day5_Raster/Day5_Raster_GermanyDGM.png)
@@ -28,7 +32,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 10: Black & White
 ![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
-<br>
+<br><br>
 [... and a version with some grey](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
 
 ***
