@@ -125,7 +125,7 @@ goode_without <- st_difference(goode_bbox, goode_outline)
 ```{r goode-map-grey}
 ## map with dark grey
 ggplot(sf_world) + 
-  geom_sf(fill = "black", color = "grey20", size = 0.01) +
+  geom_sf(fill = "black", color = "grey20", size = 0.2) +
   geom_sf(data = goode_without, fill = "white", color = NA) +
   geom_sf(data = goode_outline, fill = NA, color = "black", size = 0.1) +
   geom_sf(data = sf_capitals, 
@@ -157,7 +157,7 @@ ggplot(sf_world) +
            crs = crs_goode, 
            ndiscr = 1000) +
   labs(title = "Urban Population of the World's Capital Cities",
-       caption = "Visualization by Cédric Scherer  •  Data by Natural Earth Data & SimpleMaps.com") +
+       caption = "Visualization by Cédric Scherer  •  Data by UN World Urbanization Prospects (2018)") +
   theme(panel.background = element_rect(fill = "grey20", 
                                         color = "white"),
         axis.text = element_blank(),
@@ -188,7 +188,7 @@ ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_grey.pdf"),
 ```{r goode-map-grey}
 ## map bw only
 ggplot(sf_world) + 
-  geom_sf(fill = "black", color = "white", size = 0.01) +
+  geom_sf(fill = "black", color = "white", size = 0.2) +
   geom_sf(data = goode_without, fill = "white", color = NA) +
   geom_sf(data = goode_outline, fill = NA, color = "black", size = 0.1) +
   geom_sf(data = sf_capitals, 
@@ -220,7 +220,7 @@ ggplot(sf_world) +
            crs = crs_goode, 
            ndiscr = 1000) +
   labs(title = "Urban Population of the World's Capital Cities",
-       caption = "Visualization by Cédric Scherer  •  Data by Natural Earth Data & SimpleMaps.com") +
+       caption = "Visualization by Cédric Scherer  •  Data by UN World Urbanization Prospects (2018)") +
   theme(panel.background = element_rect(fill = "white", 
                                         color = "white"),
         axis.text = element_blank(),
