@@ -13,7 +13,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day2_Lines/Day2_Lines_OSMnx_Kiez.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day2_Lines/Day2_Lines_OSMnx_Kiez.png)
 
 ### Day 3: Polygons
-![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/3_Polygons_GlobalMortality.png)
+![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_GlobalMortality.png)
 <br>
 [... and a version showing deaths due to alcohol and drug disorder](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_Alcohol_Drugs.png)
 
