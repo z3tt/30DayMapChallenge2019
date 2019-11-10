@@ -39,6 +39,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 10: Black & White
 ![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
 <br>
+Grey version:
 ![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
 
 ***
