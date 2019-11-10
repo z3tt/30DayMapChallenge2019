@@ -14,12 +14,12 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 3: Polygons
 ![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/3_Polygons_GlobalMortality.png)
-<br><br>
+<br>
 [... and a version showing deaths due to alcohol and drug disorder](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_Alcohol_Drugs.png)
 
 ### Day 4: Hexagons
 ![./Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png)
-<br><br>
+<br>
 [... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex_1994.png)
 
 ### Day 5: Raster
@@ -27,12 +27,12 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Days 6 to 9: Blue, Green, Red & Yellow
 ![./Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png)
-<br><br>
+<br>
 [Day 6: Blue](https://github.com/Z3tt/30daymapchallenge/blob/master/Day6_Blue/Day6_Blue_Metro.png) | [Day 7: Red](https://github.com/Z3tt/30daymapchallenge/blob/master/Day7_Red/Day7_Red_Tram.png) | [Day 8: Green](https://github.com/Z3tt/30daymapchallenge/blob/master/Day8_Green/Day8_Green_Railway.png) | [Day 9: Yellow](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day9_Yellow_Bus.png)
 
 ### Day 10: Black & White
 ![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
-<br><br>
+<br>
 [... and a version with some grey](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
 
 ***
