@@ -21,26 +21,15 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 5: Raster
 ![./Day5_Raster/Day5_Raster_GermanyDGM.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day5_Raster/Day5_Raster_GermanyDGM.png)
 
-### Day 6: Blue
-![./Day6_Blue/Day6_Blue_Metro.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day6_Blue/Day6_Blue_Metro.png)
-
-### Day 7: Red
-![./Day7_Red/Day7_Red_Tram.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day7_Red/Day7_Red_Tram.png)
-
-### Day 8: Green
-![./Day8_Green/Day8_Green_Railway.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day8_Green/Day8_Green_Railway.png)
-
-### Day 9: Yellow
-![./Day9_Yellow/Day9_Yellow_Bus.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day9_Yellow_Bus.png)
-
-### Days 6 to 9: Blue, Red, Green & Yellow
+### Days 6 to 9: Blue, Green, Red & Yellow
 ![./Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png)
+<br><br>
+[Day 6: Blue](https://github.com/Z3tt/30daymapchallenge/blob/master/Day6_Blue/Day6_Blue_Metro.png) | [Day 7: Red](https://github.com/Z3tt/30daymapchallenge/blob/master/Day7_Red/Day7_Red_Tram.png) | [Day 8: Green](https://github.com/Z3tt/30daymapchallenge/blob/master/Day8_Green/Day8_Green_Railway.png) | [Day 9: Yellow](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day9_Yellow_Bus.png)
 
 ### Day 10: Black & White
 ![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
 <br>
-Grey version:
-![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
+[... and a version with some grey](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
 
 ***
 
