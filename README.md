@@ -37,9 +37,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png)
 
 ### Day 10: Black & White
-![./Day10_BlackWhite/Day10_BlackWhite_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_bw.png)
+![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
 <br>
-![./Day10_BlackWhite/Day10_BlackWhite_grey.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_grey.png)
+![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
 
 ***
 
