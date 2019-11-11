@@ -7,33 +7,33 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ***
 
 ### Day 1: Points
-![./Day1_Points/Day1_Points_Squirrels.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day1_Points/Day1_Points_Squirrels.png)
+![./Day01_Points/Points_Squirrels.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day01_Points/Points_Squirrels.png)
 
 ### Day 2: Lines
-![./Day2_Lines/Day2_Lines_OSMnx_Kiez.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day2_Lines/Day2_Lines_OSMnx_Kiez.png)
+![./Day02_Lines/Lines_OSMnx_Kiez.png](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day02_Lines/Lines_OSMnx_Kiez.png)
 
 ### Day 3: Polygons
-![./Day3_Polygons/3_Polygons_GlobalMortality.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_GlobalMortality.png)
+![./Day03_Polygons/Polygons_GlobalMortality.png](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day03_Polygons/Polygons_GlobalMortality.png)
 <br>
-[... and a version showing deaths due to alcohol and drug disorder](https://github.com/Z3tt/30daymapchallenge/blob/master/Day3_Polygons/Day3_Polygons_Alcohol_Drugs.png)
+[... and a version showing deaths due to alcohol and drug disorder](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day03_Polygons/Polygons_Alcohol_Drugs.png)
 
 ### Day 4: Hexagons
-![./Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex.png)
+![./Day04_Hexagons/Hexagons_SchoolDiversity_hex.png](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day04_Hexagons/Hexagons_SchoolDiversity_hex.png)
 <br>
-[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://github.com/Z3tt/30daymapchallenge/blob/master/Day4_Hexagons/Day4_Hexagons_SchoolDiversity_hex_1994.png)
+[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison]((https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day04_Hexagons/Hexagons_SchoolDiversity_hex_1994.png)
 
 ### Day 5: Raster
-![./Day5_Raster/Day5_Raster_GermanyDGM.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day5_Raster/Day5_Raster_GermanyDGM.png)
+![./Day05_Raster/Raster_GermanyDGM.png](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day05_Raster/Raster_GermanyDGM.png)
 
 ### Days 6 to 9: Blue, Green, Red & Yellow
-![./Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day6to9_BlueRedGreenYellow_BerlinPublicTransport.png)
+![./Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png]((https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png)
 <br>
-[Day 6: Blue](https://github.com/Z3tt/30daymapchallenge/blob/master/Day6_Blue/Day6_Blue_Metro.png) | [Day 7: Red](https://github.com/Z3tt/30daymapchallenge/blob/master/Day7_Red/Day7_Red_Tram.png) | [Day 8: Green](https://github.com/Z3tt/30daymapchallenge/blob/master/Day8_Green/Day8_Green_Railway.png) | [Day 9: Yellow](https://github.com/Z3tt/30daymapchallenge/blob/master/Day9_Yellow/Day9_Yellow_Bus.png)
+[Day 6: Blue](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day06_Blue/Blue_BerlinMetro.png) | [Day 7: Red](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day07_Red/Red_BerlinTram.png) | [Day 8: Green](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day08_Green/Green_BerlinRailway.png) | [Day 9: Yellow](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day09_Yellow/Yellow_BerlinBus.png)
 
 ### Day 10: Black & White
-![./Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_bw.png)
+![./Day10_BlackWhite/BlackWhite_CapitalPop_bw.png](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/BlackWhite_CapitalPop_bw.png)
 <br>
-[... and a version with some grey](https://github.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/Day10_BlackWhite_CapitalPop_grey.png)
+[... and a version with some grey](https://raw.githubusercontent.com/Z3tt/30daymapchallenge/blob/master/Day10_BlackWhite/BlackWhite_CapitalPop_grey.png)
 
 ***
 
