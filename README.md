@@ -1,5 +1,5 @@
-# TidyTuesday
-My contributions to the [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066).  
+# #30DayMapChallenge
+My contributions to the [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov.  
 Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [cedricphilippscherer@gmail.com](mailto:cedricphilippscherer@gmail.com).
 
 ![./data/30daymapchallenge.jpg](https://github.com/Z3tt/30daymapchallenge/blob/master/data/30daymapchallenge.jpg)
