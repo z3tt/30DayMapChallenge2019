@@ -36,7 +36,7 @@ df_capitals <- readr::read_csv(here::here("data", "capital-city-population.csv")
 df_cities <- readr::read_csv(here::here("data", "worldcities.csv"))
 ```
 
-```{r goode-map}
+```{r goode-map-data}
 ## code for Goode homolosine projection by Claus Wilke:
 ## https://gist.github.com/clauswilke/783e1a8ee3233775c9c3b8bfe531e28a
 
@@ -125,6 +125,68 @@ goode_bbox <-
 goode_without <- st_difference(goode_bbox, goode_outline)
 ```
 
+```{r goode-map-bw}
+## map bw only
+ggplot(sf_world) + 
+  geom_sf(fill = "black", color = "white", size = 0.2) +
+  geom_sf(data = goode_without, fill = "white", color = NA) +
+  geom_sf(data = goode_outline, fill = NA, color = "black", size = 0.1) +
+  geom_sf(data = sf_capitals, 
+          aes(size = Population),
+          shape = 21,
+          color = "black", 
+          fill = "white",
+          stroke = 0.75,
+          key_glyph = "point") +
+  geom_sf(data = sf_capitals, 
+          aes(size = Population),
+          shape = 21, 
+          color = "black", 
+          fill = NA, 
+          stroke = 0.75,
+          key_glyph = "point") +
+  scale_x_continuous(name = NULL, breaks = seq(-120, 120, by = 60)) +
+  scale_y_continuous(name = NULL, breaks = seq(-60, 60, by = 30)) +
+  scale_size_continuous(name = "",
+                        range = c(1, 9), 
+                        breaks = c(1000000, 5000000, 10000000, 30000000),
+                        labels = c("1 million", "5 millions", "10 millions", "30 millions")) +
+  guides(size = guide_legend(override.aes = list(color = "black", 
+                                                 fill = "black", 
+                                                 shape = 21))) +
+  coord_sf(xlim = 0.95*xlim, 
+           ylim = ylim, 
+           expand = F, 
+           crs = crs_goode, 
+           ndiscr = 1000) +
+  labs(title = "Urban Population of the World's Capital Cities",
+       caption = "Visualization by Cédric Scherer  •  Data by UN World Urbanization Prospects (2018)") +
+  theme(panel.background = element_rect(fill = "white", 
+                                        color = "white"),
+        axis.text = element_blank(),
+        panel.grid.major = element_line(color = "black", 
+                                        size = 0.1),
+        panel.grid.minor = element_line(color = "black", 
+                                        size = 0.1),
+        plot.title = element_text(family = "Open Sans ExtraBold",
+                                  color = "black", 
+                                  size = 42, 
+                                  hjust = 0.5,
+                                  margin = margin(t = 12, b = 8)),
+        plot.caption = element_text(color = "black", 
+                                    size = 14, 
+                                    face = "bold",
+                                    hjust = 0.5),
+        legend.position = c(0.4, 0.88), ##0.93, 0.85
+        legend.key = element_rect(fill = "white", color = "white"),
+        legend.text = element_text(color = "black",
+                                   size = 18, 
+                                   margin = margin(t = 5, b = 5)))
+  
+ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_bw.pdf"), 
+       width = 24, height = 12, device = cairo_pdf)
+```
+
 ```{r goode-map-grey}
 ## map with dark grey
 ggplot(sf_world) + 
@@ -185,68 +247,6 @@ ggplot(sf_world) +
                                    margin = margin(t = 14, b = 14)))
   
 ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_grey.pdf"), 
-       width = 24, height = 12, device = cairo_pdf)
-```
-
-```{r goode-map-grey}
-## map bw only
-ggplot(sf_world) + 
-  geom_sf(fill = "black", color = "white", size = 0.2) +
-  geom_sf(data = goode_without, fill = "white", color = NA) +
-  geom_sf(data = goode_outline, fill = NA, color = "black", size = 0.1) +
-  geom_sf(data = sf_capitals, 
-          aes(size = Population),
-          shape = 21,
-          color = "black", 
-          fill = "white",
-          stroke = 0.75,
-          key_glyph = "point") +
-  geom_sf(data = sf_capitals, 
-          aes(size = Population),
-          shape = 21, 
-          color = "black", 
-          fill = NA, 
-          stroke = 0.75,
-          key_glyph = "point") +
-  scale_x_continuous(name = NULL, breaks = seq(-120, 120, by = 60)) +
-  scale_y_continuous(name = NULL, breaks = seq(-60, 60, by = 30)) +
-  scale_size_continuous(name = "",
-                        range = c(1, 9), 
-                        breaks = c(1000000, 5000000, 10000000, 30000000),
-                        labels = c("1 million", "5 millions", "10 millions", "30 millions")) +
-  guides(size = guide_legend(override.aes = list(color = "black", 
-                                                 fill = "black", 
-                                                 shape = 21))) +
-  coord_sf(xlim = 0.95*xlim, 
-           ylim = ylim, 
-           expand = F, 
-           crs = crs_goode, 
-           ndiscr = 1000) +
-  labs(title = "Urban Population of the World's Capital Cities",
-       caption = "Visualization by Cédric Scherer  •  Data by UN World Urbanization Prospects (2018)") +
-  theme(panel.background = element_rect(fill = "white", 
-                                        color = "white"),
-        axis.text = element_blank(),
-        panel.grid.major = element_line(color = "black", 
-                                        size = 0.1),
-        panel.grid.minor = element_line(color = "black", 
-                                        size = 0.1),
-        plot.title = element_text(family = "Open Sans ExtraBold",
-                                  color = "black", 
-                                  size = 42, 
-                                  hjust = 0.5,
-                                  margin = margin(t = 12, b = 8)),
-        plot.caption = element_text(color = "black", 
-                                    size = 14, 
-                                    face = "bold",
-                                    hjust = 0.5),
-        legend.position = c(0.4, 0.88), ##0.93, 0.85
-        legend.key = element_rect(fill = "white", color = "white"),
-        legend.text = element_text(color = "black",
-                                   size = 18, 
-                                   margin = margin(t = 5, b = 5)))
-  
-ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_bw.pdf"), 
        width = 24, height = 12, device = cairo_pdf)
 ```
 
