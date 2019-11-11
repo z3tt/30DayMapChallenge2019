@@ -1,0 +1,55 @@
+---
+title: "#30DayMapChallenge Day 11: Elevation - DGM of Germany by Federal Agency for Cartography and Geodesy of Germany as Shaded Hill Map"
+author: "Cedric Scherer"
+date: "11th of Novemebr 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+
+```{r}
+library(tidyverse)
+library(raster)
+library(sf)
+library(rayshader)
+```
+
+```{r prep-data}
+dgm <- raster(here::here("data", "dgm200", "dgm200", "dgm200_utm32s.asc"))
+
+elmat <- matrix(raster::extract(dgm, raster::extent(dgm), buffer = 500),
+               nrow = ncol(dgm), ncol = nrow(dgm))
+
+raymat <- ray_shade(elmat)
+ambmat <- ambient_shade(elmat)
+```
+
+```{r 2D-plot-custom}
+pdf(here::here("Day11_Elevation", "Elevation_Rayshader_custom.pdf")) 
+
+elmat %>%
+  #sphere_shade(texture = create_texture("#fbfbfb", "#967d64", "#647D4B", "#fbfbfb", "#446b44"), ## v2
+  sphere_shade(texture = create_texture("#ffeede", "#685445", "#304c30", "#364624", "#467d40"),
+               sunangle = 290) %>%
+  add_shadow(raymat) %>%
+  add_shadow(ambmat) %>%
+  add_water(detect_water(elmat), color = "white") %>% 
+  plot_map() 
+
+dev.off()
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
+
