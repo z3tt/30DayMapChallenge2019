@@ -1,5 +1,5 @@
 ---
-title: "TidyTuesday 2019/34 - Nuclear Explosions by SIPRI"
+title: "#30DayMapChallenge - Day 10: BBlack and White - Popualtion of Capital Cities by UN World Urbanization Prospects"
 author: "Cedric Scherer"
 date: "21th of July 2019"
 output:
@@ -30,7 +30,9 @@ theme_update(line = element_line(colour = "white"),
 ```
 
 ```{r data}
+## population of capital cities | source: https://ourworldindata.org/grapher/capital-city-population
 df_capitals <- readr::read_csv(here::here("data", "capital-city-population.csv"))
+## geolocation of capital cities | source: https://simplemaps.com/data/world-cities
 df_cities <- readr::read_csv(here::here("data", "worldcities.csv"))
 ```
 
@@ -51,6 +53,7 @@ df_cities %>%
 ## Capital locations as sf object
 sf_capitals <-
   df_cities %>% 
+  ## clean in case there are more than 1 capital per coutnry
   mutate(
     capital = case_when(
       iso3 == "ZAF" & city != "Cape Town" ~ "not_primary",
