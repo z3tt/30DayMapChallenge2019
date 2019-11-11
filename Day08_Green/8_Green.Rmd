@@ -1,7 +1,7 @@
 ---
 title: "#30DayMapChallenge Day 8: Green - Berlin S-Bahn by OpenStreetMaps"
 author: "Cedric Scherer"
-date: "7th of October 2019"
+date: "8th of October 2019"
 output:
   html_document:
   theme: paper
@@ -88,7 +88,8 @@ berlin_transport_types %>%
          title = "Berlin <span style='color:#038354'>S-Bahn</span> Stops",
          caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap & Geoportal Berlin")
 
-ggsave(here::here("Day8_Green", "Day8_Green_Railway.pdf"), width = 9, height = 8.12, device = cairo_pdf)
+ggsave(here::here("Day08_Green", "Green_BerlinRailway.pdf"), 
+       width = 9, height = 8.12, device = cairo_pdf)
 ```
 
 ***

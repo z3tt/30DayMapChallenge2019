@@ -1,7 +1,7 @@
 ---
-title: "#30DayMapChallenge Day 6: Blue - Berlin Metro by OpenStreetMaps"
+title: "#30DayMapChallenge Day 7: Red - Berlin Tram by OpenStreetMaps"
 author: "Cedric Scherer"
-date: "6th of October 2019"
+date: "7th of October 2019"
 output:
   html_document:
   theme: paper
@@ -59,7 +59,10 @@ berlin_transport_types <-
 
 ```{r map, fig.width = 9, fig.height = 8.12}
 berlin_transport_types %>% 
-  filter(type == "U-Bahn") %>% 
+  filter(
+    type == "Tram",
+    st_coordinates(.)[,1] > 13.2  ## remove tram Potsdam
+  ) %>%
   group_by(name) %>% 
   slice(1) %>%  ## keep only 1 location per station
   ggplot() +
@@ -74,21 +77,22 @@ berlin_transport_types %>%
     ## dark borders + fill
     geom_sf(data = berlin_districts,
             color = "grey20",
-            fill = "#050523",
+            fill = "#190000",
             size = 0.6) +
     ## light outline points
     geom_sf(color = "grey80",
             size = 1.4) +
-    ## blue points
-    geom_sf(color = "#0054b2",
+    ## red points
+    geom_sf(color = "#ba1818",
             size = 0.8) +
     scale_x_continuous(limits = c(13.09, 13.76)) +
     scale_y_continuous(limits = c(52.34, 52.67)) +
     labs(x = NULL, y = NULL,
-         title = "Berlin <span style='color:#0054b2'>U-Bahn</span> Stops",
+         title = "Berlin <span style='color:#ba1818'>Tram</span> Stops",
          caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap & Geoportal Berlin")
 
-ggsave(here::here("Day6_Blue", "Day6_Blue_Metro.pdf"), width = 9, height = 8.12, device = cairo_pdf)
+ggsave(here::here("Day07_Red", "Red_BerlinTram.pdf"), 
+       width = 9, height = 8.12, device = cairo_pdf)
 ```
 
 ***

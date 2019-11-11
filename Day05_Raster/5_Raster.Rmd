@@ -30,7 +30,8 @@ dgm <- raster(here::here("data", "dgm200", "dgm200", "dgm200_utm32s.asc"))
 
 ```{r plot}
 
-png(here::here("Day5_Raster", "Day5_Raster_GermanyDGM.png"), width = 1500, height = 1900, res = 300) 
+png(here::here("Day05_Raster", "Raster_GermanyDGM.png"), 
+    width = 1500, height = 1900, res = 300) 
 
 show_landscape(dgm) +
   rcartocolor::scale_fill_carto_c(palette = "Earth", 

@@ -1,7 +1,7 @@
 ---
-title: "#30DayMapChallenge - Day 10: BBlack and White - Popualtion of Capital Cities by UN World Urbanization Prospects"
+title: "#30DayMapChallenge - Day 10: Black & White - Popualtion of Capital Cities by UN World Urbanization Prospects"
 author: "Cedric Scherer"
-date: "21th of July 2019"
+date: "10th of November 2019"
 output:
   html_document:
   theme: paper
@@ -183,7 +183,7 @@ ggplot(sf_world) +
                                    size = 18, 
                                    margin = margin(t = 5, b = 5)))
   
-ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_bw.pdf"), 
+ggsave(here::here("Day10_BlackWhite", "BlackWhite_CapitalPop_bw.pdf"), 
        width = 24, height = 12, device = cairo_pdf)
 ```
 
@@ -246,7 +246,7 @@ ggplot(sf_world) +
                                    size = 18, 
                                    margin = margin(t = 14, b = 14)))
   
-ggsave(here::here("Day10_BlackWhite", "Day10_BlackWhite_CapitalPop_grey.pdf"), 
+ggsave(here::here("Day10_BlackWhite", "BlackWhite_CapitalPop_grey.pdf"), 
        width = 24, height = 12, device = cairo_pdf)
 ```
 

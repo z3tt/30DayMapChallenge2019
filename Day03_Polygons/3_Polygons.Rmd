@@ -184,7 +184,8 @@ map_conflict <-
 ```{r full-panel, fig.width = 18, fig.height = 12.5}
 map_cdv + map_cancer + map_diabetes + map_hiv + map_malaria + map_conflict + plot_layout(ncol = 3)
 
-ggsave(here::here("Day3_Polygons", "Day3_Polygons_GlobalMortality.pdf"), width = 18, height = 12.5, device = cairo_pdf)
+ggsave(here::here("3_Polygons", "Polygons_GlobalMortality.pdf"), 
+       width = 18, height = 12.5, device = cairo_pdf)
 ```
 
 
@@ -248,7 +249,8 @@ map_drugs <-
 
 map_alcohol / map_drugs
 
-ggsave(here::here("Day3_Polygons", "Day3_Polygons_Alcohol_Drugs.pdf"), width = 11, height = 14, device = cairo_pdf)
+ggsave(here::here("3_Polygons", "Polygons_Alcohol_Drugs.pdf"), 
+       width = 11, height = 14, device = cairo_pdf)
 ```
 
 ***

@@ -127,7 +127,7 @@ map_fur <-
 ```{r full-panel, fig.width = 13, fig.height = 12.8}
 map_density + map_fur + plot_layout(widths = c(1, 0.4))
 
-ggsave(here::here("Day1_Points", "Day1_Points_Squirrels.pdf"), 
+ggsave(here::here("Day01_Points", "Points_Squirrels.pdf"), 
        width = 13, height = 12.8, device = cairo_pdf)
 ```
 

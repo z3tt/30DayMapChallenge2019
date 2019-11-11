@@ -1,7 +1,7 @@
 ---
-title: "#30DayMapChallenge Day 9: Yellow - Berlin Bus by OpenStreetMaps"
+title: "#30DayMapChallenge Days 6 to 9: Blue, Green, Red & Yellow - Berlin Public Transport by OpenStreetMaps"
 author: "Cedric Scherer"
-date: "7th of October 2019"
+date: "9th of October 2019"
 output:
   html_document:
   theme: paper
@@ -198,7 +198,8 @@ title <- ggplot(data.frame(x = 1:2, y = 1:10)) +
 ```{r full-panel, fig.width = 40, fig.height = 12.5}
 ubahn + sbahn + title + tram + bus + plot_layout(nrow = 1, widths = c(1, 1, 0, 1, 1))
 
-ggsave(here::here("Day9_Yellow", "Day6to9_BlueRedGreenYellow_BerlinPublicTransport.pdf"), width = 40, height = 11.5, device = cairo_pdf)
+ggsave(here::here("Day09_Yellow", "BlueRedGreenYellow_BerlinPublicTransport.pdf"), 
+       width = 40, height = 11.5, device = cairo_pdf)
 ```
 
 ***

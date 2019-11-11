@@ -152,7 +152,7 @@ title <- ggplot(data.frame(x = 1:2, y = 1:10)) +
 
 map_hex_diversity + title + map_hex_change + plot_layout(nrow = 1, widths = c(1, 0.01, 1))
 
-ggsave(here::here("Day4_Hexagons", "Day4_Hexagons_SchoolDiversity_hex_purp.pdf"), 
+ggsave(here::here("Day04_Hexagons", "Hexagons_SchoolDiversity_hex_purp.pdf"), 
        width = 15, height = 6.5, device = cairo_pdf)
 ```
 
