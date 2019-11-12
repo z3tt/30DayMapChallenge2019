@@ -43,8 +43,8 @@ theme_update(
 ```
 
 ```{r data-prep}
-berlin_transport <- sf::read_sf(dsn = here::here("_dev", "osm_berlin_shp", "gis_osm_transport_free_1.shp"), layer = "gis_osm_transport_free_1")
-berlin_districts <- sf::read_sf(dsn = here::here("_dev", "Bezirke__Berlin", "Bezirke__Berlin.shp"), layer = "Bezirke__Berlin")
+berlin_transport <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_transport_free_1.shp"), layer = "gis_osm_transport_free_1")
+berlin_districts <- sf::read_sf(dsn = here::here("data", "Bezirke__Berlin", "Bezirke__Berlin.shp"), layer = "Bezirke__Berlin")
 
 berlin_transport_types <-
   berlin_transport %>% 
