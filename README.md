@@ -20,13 +20,13 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 4: Hexagons
 ![./Day04_Hexagons/Hexagons_SchoolDiversity_hex.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day04_Hexagons/Hexagons_SchoolDiversity_hex.png)
 <br>
-[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison]((https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day04_Hexagons/Hexagons_SchoolDiversity_hex_1994.png)
+[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day04_Hexagons/Hexagons_SchoolDiversity_hex_1994.png)
 
 ### Day 5: Raster
 ![./Day05_Raster/Raster_GermanyDGM.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day05_Raster/Raster_GermanyDGM.png)
 
 ### Days 6 to 9: Blue, Green, Red & Yellow
-![./Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png]((https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png)
+![./Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png)
 <br>
 [Day 6: Blue](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day06_Blue/Blue_BerlinMetro.png) | [Day 7: Red](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day07_Red/Red_BerlinTram.png) | [Day 8: Green](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day08_Green/Green_BerlinRailway.png) | [Day 9: Yellow](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day09_Yellow/Yellow_BerlinBus.png)
 
@@ -39,6 +39,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day11_Elevation/Elevation_Rayshader_custom_SD.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_SD.png)
 <br>
 [Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_HD.png)<br> and [another version using a different custom texture palette](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
+
+### Day 12: Movement
+![./Day12_Movement/Movement_BerlinByBike.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day12_Movement/Movement_BerlinByBike.png)
 
 ***
 

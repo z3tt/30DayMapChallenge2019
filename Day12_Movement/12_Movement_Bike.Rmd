@@ -1,0 +1,102 @@
+---
+title: "#30DayMapChallenge Day 6: Blue - Berlin Metro by OpenStreetMaps"
+author: "Cedric Scherer"
+date: "6th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep}
+library(tidyverse)
+library(sf)
+library(ggtext)
+library(showtext)
+
+font_add_google("Staatliches", "Staatliches")
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(fill = "grey92", 
+                                  color = "grey92"),
+  plot.background = element_rect(fill = "grey92", 
+                                 color = "grey92"),
+  plot.margin = margin(0, 30, 0, 30),
+  plot.title = element_markdown(family = "Staatliches", 
+                                color = "#2c6350",
+                                size = 53,
+                                face = "bold",
+                                hjust = 0.5,
+                                margin = margin(t = 42, b = 12)),
+  plot.subtitle = element_markdown(family = "Staatliches", 
+                                   color = "grey50",
+                                   size = 19,
+                                   hjust = 0.5,
+                                   margin = margin(t = 0, b = 0))
+)
+```
+
+```{r data-prep}
+sf_bln_roads <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_roads_free_1.shp"), 
+                              layer = "gis_osm_roads_free_1")
+
+sf_bln_water <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_water_a_free_1.shp"), 
+                            layer = "gis_osm_water_a_free_1")
+
+sf_bln_districts <- sf::read_sf(dsn = here::here("data", "Bezirke__Berlin", "Bezirke__Berlin.shp"), 
+                                layer = "Bezirke__Berlin")
+
+sd_bln_outer <- raster::srtm_masked = mask(srtm, zion)
+```
+
+```{r map, fig.width = 12, fig.height = 10.8}
+sf_bln_roads_classified <- 
+  sf_bln_roads %>% 
+  filter(!fclass %in% c("bridleway", "footway", "path", "pedestrian", "steps")) %>% 
+  mutate(class = if_else(fclass == "cycleway", "bike", "car"))
+  
+sf_bln_roads_classified %>% 
+  filter(class == "bike") %>% 
+  ggplot() + 
+    ## Berlin base map
+    geom_sf(data = sf_bln_districts,
+            fill = "white",
+            color = "white",
+            size = 0.7) +
+    ## water
+    geom_sf(data = sf_bln_water,
+            fill = "#ccddef",  
+            color = "#ccddef") +
+    ## roads designated for cars
+    geom_sf(data = sf_bln_roads_classified %>% filter(class == "car"), 
+            color = "#c8d8d8", size = 0.15) +
+    ## outline roads designated for bikes
+    geom_sf(color = "#2c6350", size = 0.75) + 
+    ## roads designated for bikes
+    geom_sf(color = "#00c121", size = 0.45) + 
+    ## caption within panel area
+    annotate("text", x = 13.456, y = 52.347, 
+             hjust = 0.6, vjust = 1,
+             label = "Visualization by Cédric Scherer  •  Data by OpenStreetMap",
+             family = "Staatliches", size = 5.8, color = "#8fb0b0") + 
+    labs(title = "Moving through Berlin by Bike",
+         subtitle = "Road network of Berlin showing streets designated for <b style='color:#00c121'>cyclists</b> and <b style='color:#8fb0b0'>car drivers</b>")
+
+ggsave(here::here("Day12_Movement", "Movement_BerlinByBike.pdf"), 
+       width = 12, height = 10.8, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
+
