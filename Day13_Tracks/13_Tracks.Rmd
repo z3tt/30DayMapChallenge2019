@@ -1,0 +1,192 @@
+---
+title: "#30DayMapChallenge Day 13: Tracks - Stork Migration Data by Roticas et al. 2018 via Movebank.org"
+author: "Cedric Scherer"
+date: "13th of November 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+## packages
+library(tidyverse)
+library(sf)
+library(ggtext)
+library(patchwork)
+library(showtext)
+
+font_add_google("Prata", "Prata")
+
+## ggplot theme updates
+source(here::here("theme", "tidy_grey.R"))
+
+theme_update(
+  rect = element_rect(fill = "white", color = "white"),
+  axis.ticks = element_blank(),
+  axis.text = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.background = element_rect(fill = "#a4dee9"),
+  panel.border = element_rect(color = NA),
+  panel.spacing = unit(32, "pt"), 
+  plot.margin = margin(0, 24, 0, 24),
+  plot.title = element_text(family = "Prata", 
+                            color = "black",
+                            size = 36,  
+                            face = "bold", 
+                            hjust = 0.5,
+                            margin = margin(t = 32, b = 24)),
+  plot.subtitle = element_markdown(family = "Prata", 
+                                   color = "grey40", 
+                                   size = 14,
+                                   face = "bold",
+                                   hjust = 0.5, 
+                                   lineheight = 1.4,
+                                   margin = margin(b = 18)),
+  plot.caption = element_markdown(family = "Prata", 
+                                  color = "grey55", 
+                                  size = 12, 
+                                  hjust = 0.5, 
+                                  lineheight = 1.4,
+                                  margin = margin(b = 18)),
+  strip.background = element_blank(),
+  strip.text = element_blank(),
+  legend.position = "bottom",
+  legend.key = element_rect(fill = "transparent", 
+                            color = "transparent"),
+  legend.background = element_rect(fill = "transparent", 
+                                   color = "transparent"),
+  legend.title = element_text(family = "Prata", 
+                              color = "grey40", 
+                              size = 14, 
+                              face = "bold"),
+  legend.text = element_text(family = "Prata", 
+                             color = "grey40", 
+                             size = 12,
+                             face = "bold")
+)
+```
+
+```{r data}
+## dew projections
+miller <- "+proj=mill +lat_0=0 +lon_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
+
+## map data
+sf_world <- st_as_sf(rworldmap::getMap(resolution = "high"))
+
+sf_world_miller <- st_as_sf(sf_world) %>% 
+  st_transform(crs = miller)
+
+## movement data
+sf_storks <- readr::read_csv(here::here("data", "Rotics_et_al_2018_white_storks.csv")) %>% 
+ rename(
+    "lat" = "location-lat",
+    "lon" = "location-long",
+    "id" = "individual-local-identifier"
+  ) %>% 
+  filter(!is.na(lat)) %>% 
+  st_as_sf(coords = c("lon", "lat")) %>% 
+  st_set_crs(4326) %>% 
+  st_transform(crs = miller)
+```
+
+```{r map, fig.width = 11, fig.height = 14}
+## data with "Gili" as individual of interest
+sf_storks_clean <- 
+  sf_storks %>% 
+  dplyr::select(id, timestamp, `ground-speed`) %>% 
+  mutate(
+    year = lubridate::year(timestamp), 
+    day = lubridate::yday(timestamp)
+  ) %>% 
+  filter(year >= 2014) %>% 
+  mutate(
+    lon = st_coordinates(.)[,1],
+    lat = st_coordinates(.)[,2]
+  ) %>% 
+  filter(!is.na(lat)) %>% 
+  group_by(year) %>% 
+  mutate(
+    highlight = if_else(id == "2421/HH847/Gili", "1", "0"),
+    storks = glue::glue("       {n_distinct(id)} tagged storks"),
+    n = n(),
+    gps = glue::glue('{format(n, digits = 6, decimal.mark=",", big.mark=".", small.interval = 3)} GPS locations')
+  ) %>% 
+  ungroup()
+
+labels <- 
+  sf_storks_clean %>% 
+  as_tibble() %>% 
+  group_by(year) %>% 
+  summarize(
+    storks = unique(storks),
+    gps = unique(gps),
+  )
+
+## highlight "Gili" and day of the year
+sf_storks_clean %>% 
+  ggplot() +
+    geom_sf(data = sf_world_miller,
+            fill = "#fae1b0", 
+            color = "#edc48a",
+            size = 0.3) +
+    geom_path(data = sf_storks_clean %>% filter(highlight == "0"),
+              aes(lon, lat, group = id),
+              color = "grey70",
+              size = 0.3) +
+    geom_sf(data = sf_storks_clean %>% filter(highlight == "1"),
+            aes(color = day),
+            size = 0.2,
+            alpha = 0.4) +
+    geom_text(data = labels, 
+              aes(label = year),
+              x = -1900000, y = -2600000, 
+              family = "Modern No. 20", color = "grey20", 
+              size = 20, fontface = "bold", hjust = 0) +
+    geom_text(data = labels, 
+              aes(label = storks),
+              x = -1900000, y = -3500000, 
+              family = "Prata", color = "grey20", 
+              size = 3.4, fontface = "bold", hjust = 0) +
+    geom_text(data = labels, 
+              aes(label = gps),
+              x = -1900000, y = -3900000, 
+              family = "Prata", color = "grey20", 
+              size = 3.4, fontface = "bold", hjust = 0) +
+    coord_sf(xlim = c(-2100000, 5900000), 
+             ylim = c(-3900000, 7000000)) +
+    scale_color_viridis_c(option = "inferno",
+                          direction = -1,
+                          end = 0.8,
+                          name = "Day of the Year",
+                          limits = c(19, 156),
+                          breaks = c(32, 60, 91, 121, 152),
+                          labels = c("1st of February", "1st of March", "1st of April", "1st of May", "1st of June")) +
+    guides(color  = guide_colorbar(barheight = unit(3, units = "mm"),
+                                   barwidth = unit(230, units = "mm"),
+                                   direction = "horizontal",
+                                   ticks.colour = "white",
+                                   title.position = "top",
+                                   title.hjust = 0.5)) +
+    facet_wrap(~ year, nrow = 1) +
+    labs(x = NULL, y = NULL,
+         title = 'On a journey with a white stork called "Gili"',
+         subtitle = 'Tracking data of adult white storks (<i>Ciconia ciconia</i>) for the years 2014–2016. The position of the storks has been estimated via GPS every 5 minutes.<br>The stork with the ID 2421/HH847, lovingly called "Gili", travelled the furthest distance all the way from South Africa back to Germany.',
+         caption = '<br><br>Rotics S., Kaatz M., Turjeman S., Zurell D., Wikelski M., Sapir N., Eggers U., Fiedler W., Jeltsch F. & Nathan R. (2018)<br>Early arrival at breeding grounds: Causes, costs and a trade-off with overwintering latitude. <i>J. Anim. Ecol.</i> <b>87</b>:1627–1638. doi: 10.1111/1365-2656.12898.<br><br><br>Visualization by Cédric Scherer')
+
+ggsave(here::here("Day13_Tracks", "Tracks_StorksGili.pdf"),
+       width = 15, height = 11.3, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```

@@ -38,10 +38,15 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 11: Elevation
 ![./Day11_Elevation/Elevation_Rayshader_custom_SD.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_SD.png)
 <br>
-[Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_HD.png)<br> and [another version using a different custom texture palette](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_HD.png) and [another version using a different custom texture palette](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
 
 ### Day 12: Movement
 ![./Day12_Movement/Movement_BerlinByBike.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day12_Movement/Movement_BerlinByBike.png)
+
+### Day 13: Tracks
+![./Day13_Tracks/Tracks_StorksGili.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day13_Tracks/Tracks_StorksGili.png)
+<br>
+[Read the paper!](https://doi.org/10.1111/1365-2656.12898)
 
 ***
 
