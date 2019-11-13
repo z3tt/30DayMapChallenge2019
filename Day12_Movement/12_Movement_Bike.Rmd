@@ -1,7 +1,7 @@
 ---
-title: "#30DayMapChallenge Day 6: Blue - Berlin Metro by OpenStreetMaps"
+title: "#30DayMapChallenge Day 12: Movement - Berlin Cycleways by OpenStreetMaps"
 author: "Cedric Scherer"
-date: "6th of October 2019"
+date: "12th of October 2019"
 output:
   html_document:
   theme: paper
@@ -53,8 +53,6 @@ sf_bln_water <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_
 
 sf_bln_districts <- sf::read_sf(dsn = here::here("data", "Bezirke__Berlin", "Bezirke__Berlin.shp"), 
                                 layer = "Bezirke__Berlin")
-
-sd_bln_outer <- raster::srtm_masked = mask(srtm, zion)
 ```
 
 ```{r map, fig.width = 12, fig.height = 10.8}
