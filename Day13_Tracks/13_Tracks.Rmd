@@ -85,8 +85,12 @@ sf_world_miller <- st_as_sf(sf_world) %>%
   st_transform(crs = miller)
 
 ## movement data
-sf_storks <- readr::read_csv(here::here("data", "Rotics_et_al_2018_white_storks.csv")) %>% 
- rename(
+#df_storks <- readr::read_csv(here::here("data", "Rotics_et_al_2018_white_storks.csv")) 
+#saveRDS(df_storks, here::here("data", "Rotics_et_al_2018_white_storks.Rds"))
+
+sf_storks <-
+  readRDS(here::here("data", "Rotics_et_al_2018_white_storks.Rds")) %>% 
+  rename(
     "lat" = "location-lat",
     "lon" = "location-long",
     "id" = "individual-local-identifier"
