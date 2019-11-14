@@ -130,7 +130,7 @@ ggplot(sf_world_borders) +
                              label.position = "top")) +
   labs(x = NULL, y = NULL,
        title = "Countries & Territories of the World",
-       subtitle = "by number of unique states each shares a border with",
+       subtitle = "by number of unique countries each shares a land border with",
        caption = "Visualization by Cédric Scherer  •  Data by Wikipedia")
 
 ggsave(here::here("Day14_Boundaries", "Boundaries_GlobalNeighbors.pdf"),
