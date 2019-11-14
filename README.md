@@ -48,6 +48,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 <br>
 [Read the paper!](https://doi.org/10.1111/1365-2656.12898)
 
+### Day 14: Boundaries
+![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
+
 ***
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)

@@ -1,0 +1,144 @@
+---
+  title: "#30DayMapChallenge Day 14: Boundaries - Borders by Number of Neighbors"
+author: "Cedric Scherer"
+date: "14th of November 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(showtext)
+
+font_add_google("Alice", "Alice")
+
+theme_set(theme_minimal())
+
+theme_update(
+  axis.ticks = element_blank(),
+  axis.text = element_blank(),
+  panel.grid.major = element_line(color = "#b3bdbf", 
+                                  size = 0.5),
+  panel.background = element_rect(color = NA, 
+                                  fill = "grey90"),
+  plot.background = element_rect(color = NA, 
+                                 fill = "grey90"),
+  plot.title = element_text(family = "Alice", 
+                            color = "black",
+                            size = 42, 
+                            face = "bold",
+                            hjust = 0.5,
+                            margin = margin(t = 24, b = 6)),
+  plot.subtitle = element_text(family = "Alice", 
+                               color = "black",
+                               size = 20, 
+                               face = "plain",
+                               hjust = 0.5,
+                               margin = margin(t = 0, b = 0)),
+  plot.caption = element_text(family = "Alice", 
+                              color = "#7d92af", 
+                              size = 15, 
+                              hjust = 0.5,
+                              margin = margin(t = 0, b = 24)),
+  legend.position = "top",
+  legend.text = element_text(family = "Alice", 
+                             color = "black",
+                             size = 20),
+  legend.key.width = unit(5.2, "lines"),
+  legend.key.height = unit(0.8, "lines")
+)
+```
+
+```{r data-prep}
+df_borders <- readr::read_csv(here::here("data", "borders-wiki.csv")) %>% 
+  slice(-1) %>% 
+  dplyr::select(
+    country = 1,
+    length = 2,
+    neighbours = 5
+  ) %>% 
+  mutate(
+    country = str_sub(country, start = 2),
+    country = case_when(
+      country == "United States" ~ "United States of America",
+      country == "People's Republic of China[17]" ~ "China",
+      country == "France (excluding French overseas departments, collectivities, and territories)" ~ "France",
+      country == "Netherlands[38]" ~ "Netherlands",
+      country == "United Kingdom[44]" ~ "United Kingdom",
+      country == "Kosovo[4]" ~ "Kosovo",
+      country == "Palestine[25]" ~ "Palestine",
+      country == "São Tomé and Príncipe" ~ "Sao Tome and Principe",
+      country == "Western Sahara[5]" ~ "Western Sahara",
+      country == "Tanzania" ~ "United Republic of Tanzania",
+      country == "Côte d'Ivoire" ~ "Ivory Coast",
+      country == "Guinea-Bissau" ~ "Guinea Bissau",
+      country == "Serbia" ~ "Republic of Serbia",
+      country == "North Macedonia" ~ "Macedonia",
+      str_detect(country, "Switzerland") ~ "Switzerland",
+      str_detect(country, "Nepal") ~ "Nepal",
+      TRUE ~ country
+    ),
+    neighbours = case_when(
+      neighbours == "0[21]" ~ 0,
+      neighbours == "0[41]" ~ 0,
+      neighbours == "1 (2)" ~ 1,
+      neighbours == "2 (3)" ~ 2,
+      neighbours == "4 (3)" ~ 4,
+      TRUE ~ as.numeric(neighbours)
+    )
+  )
+
+sf_world <- st_as_sf(rworldmap::getMap(resolution = "low")) %>%
+  st_transform(crs = "+proj=robin")
+
+sf_world_borders <-
+  sf_world %>% 
+  left_join(df_borders, by = c("SOVEREIGNT" = "country")) %>% 
+  mutate(
+    neighbours = if_else(SOVEREIGNT == "Antarctica", 0, neighbours),
+    neighbours = if_else(SOVEREIGNT == "Somaliland", 3, neighbours),
+    neighbours = factor(neighbours, levels = as.character(seq(0, 14, by = 1)))
+  ) %>% 
+  filter(!is.na(neighbours))
+```
+
+```{r map, fig.width = 18, fig.height = 11.7}
+ggplot(sf_world_borders) +
+  geom_sf(color = NA,
+          fill = "white") +
+  geom_sf(aes(fill = neighbours), 
+          color = "#7d92af", 
+          alpha = 0.75,
+          size = 0.3) +
+  scale_x_continuous(breaks = seq(-180, 180, by = 30)) +
+  scale_y_continuous(breaks = c(seq(-80, 80, by = 20), 85)) +
+  scico::scale_fill_scico_d(palette = "davos", 
+                            name = NULL,
+                            #drop = F,
+                            direction = -1) +
+  guides(fill = guide_legend(title.position = "top", 
+                             title.hjust = 0.5, nrow = 1,
+                             label.position = "top")) +
+  labs(x = NULL, y = NULL,
+       title = "Countries & Territories of the World",
+       subtitle = "by number of unique states each shares a border with",
+       caption = "Visualization by Cédric Scherer  •  Data by Wikipedia")
+
+ggsave(here::here("Day14_Boundaries", "Boundaries_GlobalNeighbors.pdf"),
+       width = 18, height = 11.74, device = cairo_pdf)
+```
+
+***
+  
+```{r session-info}
+sessionInfo()
+```
