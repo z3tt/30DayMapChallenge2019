@@ -1,0 +1,131 @@
+---
+title: "#30DayMapChallenge Day 15: Names - Berlin City Names by OpenStreetMaps"
+author: "Cedric Scherer"
+date: "15th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep}
+library(tidyverse)
+library(sf)
+library(ggtext)
+library(showtext)
+
+font_add_google("Oswald", "Oswald")
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(fill = "white", 
+                                  color = "white"),
+  plot.background = element_rect(fill = "white", 
+                                 color = "grey60",
+                                 size = 7),
+  plot.margin = margin(20, 30, 20, 30),
+  plot.title = element_text(family = "Oswald", 
+                            color = "grey20",
+                            size = 54,
+                            face = "bold",
+                            hjust = 0.5,
+                            margin = margin(t = 20, b = 2)),
+  plot.caption = element_markdown(family = "Oswald", 
+                              color = "grey60",
+                              size = 9,
+                              hjust = 0,
+                              lineheight = 1.5,
+                              margin = margin(0, 12, 6, 200)),
+  legend.position = "top",
+  legend.box.spacing = unit(0.2, "cm"), 
+  legend.key = element_rect(fill = NA, color = NA), 
+  legend.key.size = unit(1, "lines"),
+  legend.text = element_text(family = "Oswald", 
+                             color = "grey60",
+                             size = 12,
+                             face = "bold")
+)
+```
+
+```{r data-prep}
+sf_bln_roads <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_roads_free_1.shp"), 
+                              layer = "gis_osm_roads_free_1")
+
+sf_bln_water <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_water_a_free_1.shp"), 
+                            layer = "gis_osm_water_a_free_1")
+```
+
+```{r map, fig.width = 12, fig.height = 10.8}
+sf_bln_roads_classified <- 
+  sf_bln_roads %>% 
+  filter(!fclass %in% c("footway", "steps")) %>% 
+  filter(!is.na(name)) %>% 
+  mutate(
+    type = case_when(
+      str_detect(name, "Straße|straße") ~ "Straße",
+      str_detect(name, "Allee|allee") ~ "Allee",
+      str_detect(name, "Platz|platz") ~ "Platz",
+      str_detect(name, "Damm|damm") ~ "Damm",
+      str_detect(name, "Chaussee|chaussee") ~ "Chaussee",
+      str_detect(name, "Weg|weg") ~ "Weg",
+      str_detect(name, "Ufer|ufer|Steg|steg|See|see") ~ "Water",  ## i.e. Ufer, Steg, See
+      TRUE ~ "Other" ## e.g. Promenade, Pfad, Ring, Graben, Zeile, Gasse, Brücke, Hof, Bogen, Tor, ...
+    ),
+    type = factor(type, levels = c("Straße", "Weg", "Allee", "Damm", 
+                                   "Platz", "Chaussee", "Water", "Other"))
+  )
+  
+sf_bln_roads_classified %>% 
+  ggplot() + 
+    ## water
+    geom_sf(data = sf_bln_water,
+            fill = "#cedded",  
+            color = "#cedded") +
+    ## roads by type
+    geom_sf(aes(color = type), 
+            size = 0.3, 
+            show.legend = "point") + 
+     scale_color_manual(
+       values = c(
+       "#f6cf71",  ## Straße
+       "#019868",  ## Weg
+       "#ec0b88",  ## Allee
+       "#651eac",  ## Damm
+       "#e18a1e",  ## Platz
+       "#9dd292",  ## Chaussee
+       "#2b7de5",  ## Water
+       "#c6c6c6"), ## Andere
+     name = NULL,
+     labels = c("STRAßE    ", "WEG    ", "ALLEE    ", "DAMM    ", 
+                "PLATZ    ", "CHAUSSEE    ", "WATER¹    ", "OTHER²")
+     ) +
+    guides(color = guide_legend(title.position = "top", 
+                                title.hjust = 0.5, nrow = 1,
+                                label.position = "right",
+                                override.aes = list(size = 7.5))) +
+    annotate("text", x = 13.45, y = 52.344, 
+             hjust = 0.6, vjust = 1,
+             label = "Visualization by Cédric Scherer  •  Data by OpenStreetMap",
+             family = "Oswald", 
+             size = 4.5, 
+             color = "grey60") + 
+    labs(title = "NAMES OF ROADS IN BERLIN",
+         caption = '¹ Road type names that are related to close-by water bodies, i.e. **"See"**, **"Ufer"**, and **"Steg"**<br>² Other road type names include for example **"Promenade"**, **"Pfad"**, **"Ring"**, **"Zeile"**, **"Gasse"**, **"Brücke"**, **"Graben"**, and **Hof**')
+
+ggsave(here::here("Day15_Names", "Names_BerlinRoads.pdf"), 
+       width = 12, height = 11.63, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
+
