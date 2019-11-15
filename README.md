@@ -36,9 +36,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 [... and a version with some grey](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day10_BlackWhite/BlackWhite_CapitalPop_grey.png)
 
 ### Day 11: Elevation
-![./Day11_Elevation/Elevation_Rayshader_custom_SD.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_SD.png)
+![./Day11_Elevation/Elevation_Rayshader_custom.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom.png)
 <br>
-[Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_HD.png) and [another version using a different custom texture palette](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_HQ.png) and [another version using a different custom texture palette](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
 
 ### Day 12: Movement
 ![./Day12_Movement/Movement_BerlinByBike.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day12_Movement/Movement_BerlinByBike.png)
@@ -50,6 +50,10 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 14: Boundaries
 ![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
+
+### Day 14: Boundaries
+![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads_HQ.png)
 
 ***
 
