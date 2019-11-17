@@ -51,9 +51,12 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 14: Boundaries
 ![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
 
-### Day 14: Boundaries
+### Day 15: Names
 ![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads.png)
 [Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads_HQ.png)
+
+### Day 16: Places
+![./Day16_Places/PlacesExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day16_Places/PlacesExtremesEarth.png)
 
 ***
 
