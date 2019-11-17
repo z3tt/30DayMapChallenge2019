@@ -58,6 +58,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 16: Places
 ![./Day16_Places/PlacesExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day16_Places/PlacesExtremesEarth.png)
 
+### Day 17: Zones
+![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth.png)
+
 ***
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
