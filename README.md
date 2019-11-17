@@ -56,10 +56,11 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 [Here is the high resolution version](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads_HQ.png)
 
 ### Day 16: Places
-![./Day16_Places/PlacesExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day16_Places/PlacesExtremesEarth.png)
+![./Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day16_Places/Places_ExtremesEarth.png)
 
 ### Day 17: Zones
 ![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth.png)
+[... and a even more colorful version with filled countries only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth_countries.png)
 
 ***
 

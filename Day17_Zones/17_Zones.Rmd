@@ -56,12 +56,12 @@ data("wrld_simpl")
 
 sf_world <- wrld_simpl %>% 
   st_as_sf()
+
 sf_tz <-
   rnaturalearth::ne_download(scale = 10, 
                              category = "cultural", 
                              type = "time_zones",
                              returnclass = "sf") %>% 
-  #st_transform(crs = "+proj=robin") %>% 
   mutate(map_color6 = factor(map_color6))
 
 ## colors based on LaCroixColoR's "Apricot" palette
@@ -85,6 +85,34 @@ ggplot(sf_tz) +
        caption = "<span style='color:#D72000'>Visualization:</span> <span style='color:#EE6100'>Cédric</span> <span style='color:#FFAD0A'>Scherer</span>  •  <span style='color:#1BB6AF'>Data:</span> <span style='color:#1C3181'>Natural</span> <span style='color:#800080'>Earth</span>")
 
 ggsave(here::here("Day17_Zones", "Zones_TimezonesEarth.pdf"), 
+       width = 18, height = 10.9, device = cairo_pdf)
+```
+
+```{r map-countries-only, fig.width = 18, fig.height = 10.9}
+sf_ocean <-
+  rnaturalearth::ne_download(scale = 10, 
+                             category = "physical", 
+                             type = "ocean",
+                             returnclass = "sf")
+
+ggplot(sf_tz) + 
+  geom_sf(aes(color = map_color6, 
+              fill = map_color6), 
+          size = 0.1) + 
+  geom_sf(data = sf_ocean, 
+          color = "white", 
+          fill = "white") + 
+  geom_sf(aes(color = map_color6), 
+          fill = NA,
+          size = 0.3) + 
+  scale_color_manual(values = cols,
+                    guide = F) +
+  scale_fill_manual(values = cols,
+                    guide = F) +
+  labs(title = "<span style='color:#D72000'>The</span> <span style='color:#EE6100'>Time</span> <span style='color:#FFAD0A'>Zones</span> <span style='color:#1BB6AF'>of</span> <span style='color:#1C3181'>the</span> <span style='color:#800080'>World</span>",
+       caption = "<span style='color:#D72000'>Visualization:</span> <span style='color:#EE6100'>Cédric</span> <span style='color:#FFAD0A'>Scherer</span>  •  <span style='color:#1BB6AF'>Data:</span> <span style='color:#1C3181'>Natural</span> <span style='color:#800080'>Earth</span>")
+
+ggsave(here::here("Day17_Zones", "Zones_TimezonesEarth_countries.pdf"), 
        width = 18, height = 10.9, device = cairo_pdf)
 ```
 
