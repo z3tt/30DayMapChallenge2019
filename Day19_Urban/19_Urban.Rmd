@@ -1,0 +1,155 @@
+---
+title: "#30DayMapChallenge Day 19: Urban - Urban Areas by NaturalEarth"
+author: "Cedric Scherer"
+date: "19th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(showtext)
+
+font_add_google("Prata", "Prata")
+
+theme_set(theme_minimal())
+
+theme_update(
+  axis.ticks = element_blank(),
+  axis.text = element_blank(),
+  axis.title = element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.background = element_rect(color = NA, 
+                                  fill = "#00101f"), #001a33
+  plot.background = element_rect(color = "white", 
+                                 fill = "#00101f",
+                                 size = 25)
+)
+```
+
+```{r data-prep}
+sf_urban_areas <- 
+  rnaturalearth::ne_download(scale = 10, 
+                             category = "cultural", 
+                             type = "urban_areas",
+                             returnclass = "sf") %>% 
+  st_transform(crs = "+proj=moll")
+
+sf_urban_lands <- 
+  rnaturalearth::ne_download(scale = 10, 
+                             category = "cultural", 
+                             type = "urban_areas_landscan",
+                             returnclass = "sf") %>% 
+  st_transform(crs = "+proj=moll")
+```
+
+```{r light-map, fig.width = 16, fig.height = 7.2}
+## labels
+title <- "Urban Areas of the World"
+subtitle <- "derived from 2002–2003 MODIS data at 1 km resolution"
+caption <- "Visualization by Cédric Scherer"
+
+## outline dark
+ggplot(sf_urban_areas) + 
+  geom_sf(color = "#201e14", 
+         fill = NA,
+         size = 0.5) +
+  geom_sf(color = NA, 
+         fill = "#ffef9a",
+         size = 0.05) +
+  annotate(geom = "text", x = -12000000, y = -4150000, 
+           label = title, 
+           family = "Prata",
+           color = "#ffef9a",  ## v1: #d8d1a7
+           fontface = "bold",
+           size = 7.2,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -12000000, y = -4700000, 
+           label = subtitle, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "italic",
+           size = 2.9,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -12000000, y = -5600000, 
+           label = caption, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "bold",
+           size = 3.3,
+           hjust = 0.5) +
+  labs(x = NULL, y = NULL)
+
+ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas.pdf"), 
+       width = 16, height = 7.2, device = cairo_pdf)
+```
+
+```{r dot-map, fig.width = 16, fig.height = 6.16}
+title_dot <- "The World's Urban Population"
+subtitle_dot <- "derived from 2002–2003 MODIS data at 1 km resolution"
+
+ggplot(sf_urban_lands) +
+  geom_point(aes(mean_bb_xc, 
+                 mean_bb_yc, 
+                 size = max_pop_al),
+             color = "#ffef9a", 
+             alpha = 0.3) +  #0.2
+  annotate(geom = "text", x = -132, y = -36, 
+           label = title_dot, 
+           family = "Prata",
+           color = "#ffef9a",
+           fontface = "bold",
+           size = 6.8,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -132, y = -43.5, 
+           label = subtitle_dot, 
+           family = "Prata",
+           color = "#8d833f",
+           fontface = "italic",
+           size = 2.9,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -132, y = -52, 
+           label = caption, 
+           family = "Prata",
+           color = "#8d833f",
+           fontface = "bold",
+           size = 3.3,
+           hjust = 0.5) +
+  scale_size(range = c(0.01, 2.5), 
+             name = "Dot size represents population",
+             breaks = c(1000, 1000000, 5000000, 10000000, 20000000),
+             labels = c("  1k  ", "  1m  ", "  5m  ", "  10m  ", "  20m  ")) +  #0.1, 5
+  coord_equal() +
+  guides(size = guide_legend(title.position = "top", 
+                                title.hjust = 0.5, nrow = 1,
+                                label.position = "bottom")) +
+  theme(legend.position = c(0.945, 0.95),
+        legend.title = element_text(family = "Prata",
+                                    color = "#8d833f",
+                                    size = 7,
+                                    face = "bold"),
+        legend.text = element_text(family = "Prata",
+                                   color = "#8d833f",
+                                   size = 6),
+        legend.key.height = unit(0.1, "lines"))
+
+ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanLands.pdf"), 
+       width = 16, height = 6.16, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
+
