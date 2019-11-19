@@ -62,6 +62,13 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth.png)
 [... and a even more colorful version with filled countries only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth_countries.png)
 
+### Day 18: Globe
+![./Day18_Globe/Globe_Projections.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day18_Globe/Globe_Projections.png)
+
+### Day 19: Urban
+![./Day19_Urban/Urban_GlobalUrbanAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png)
+[... and another version, a dot map of the urban population](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)
+
 ***
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
