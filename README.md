@@ -67,7 +67,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 19: Urban
 ![./Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)
-[Another version without land masses](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png) and a dot map of the urban population](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)
+[Another version without land masses](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png) and [a dot map of the urban population](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)
 
 ### Day 19: Urban
 ![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas.png)
