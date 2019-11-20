@@ -1,0 +1,133 @@
+---
+title: "#30DayMapChallenge Day 20: Rural - Berlin Rural Areas by OpenStreetMaps"
+author: "Cedric Scherer"
+date: "20th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep}
+library(tidyverse)
+library(sf)
+library(ggtext)
+library(showtext)
+
+font_add_google("Arvo", "Arvo")
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(fill = "#fbf2e7", 
+                                  color = NA),
+  plot.background = element_rect(fill = "#fbf2e7", 
+                                 color = "#fbf2e7"),
+  plot.margin = margin(20, 30, 20, 30),
+  plot.title = element_markdown(family = "Arvo", 
+                                color = "grey70",
+                                size = 40,
+                                face = "bold",
+                                hjust = 0.5,
+                                margin = margin(t = 20, b = 2))
+)
+```
+
+```{r data-prep}
+sf_bln_districts <- sf::read_sf(dsn = here::here("data", "Bezirke__Berlin", "Bezirke__Berlin.shp"), 
+                                layer = "Bezirke__Berlin")
+
+sf_bln_water <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_water_a_free_1.shp"), 
+                            layer = "gis_osm_water_a_free_1") %>% 
+  st_intersection(sf_bln_districts)
+
+sf_bln_roads <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_roads_free_1.shp"), 
+                              layer = "gis_osm_roads_free_1") %>% 
+  filter(!fclass %in% c("footway", "steps", "bridleway", "path", "pedestrian", "cycleway")) %>% 
+  st_intersection(sf_bln_districts)
+
+sf_bln_landuse <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_landuse_a_free_1.shp"), 
+                              layer = "gis_osm_landuse_a_free_1")
+
+sf_bln_nature <- sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_natural_a_free_1.shp"), 
+                              layer = "gis_osm_natural_a_free_1")
+
+sf_bln_rural <- sf_bln_landuse %>% 
+  rbind(sf_bln_nature) %>% 
+  mutate(rural = if_else(fclass %in% c("forest", "grass", "meadow", "nature_reserve", "scrub", "heath", "beach", "cliff"), "1", "0")) %>% 
+  st_intersection(sf_bln_districts)
+```
+
+```{r map-brown-roads, fig.width = 12, fig.height = 10.59}
+sf_bln_rural %>% 
+  filter(rural == "1") %>% 
+  ggplot() + 
+    geom_sf(data = sf_bln_districts,
+            fill = "grey92",
+            color = NA) +
+    geom_sf(data = sf_bln_water,
+            fill = "#a9c3df",  
+            color = "#a9c3df") +
+    geom_sf(data = sf_bln_roads,
+            color = "grey80",
+            lwd = 0.2) +
+    geom_sf(fill = "#d9aa6c", 
+            color = "#d9aa6c",
+            lwd = 0.05) +
+    annotate("text", x = 13.45, y = 52.344, 
+             hjust = 0.6, vjust = 1,
+             label = "Visualization by Cédric Scherer  •  Data by OpenStreetMap",
+             family = "Arvo", 
+             size = 4.5, 
+             color = "#d9aa6c",
+             fontface = "bold") +
+      labs(title = "<span style='color:#d9aa6c'>Rural Areas</span> in Berlin")
+
+ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas2.pdf"), 
+       width = 12, height = 10.59, device = cairo_pdf)
+```
+
+```{r map-green, fig.width = 12, fig.height = 10.59}
+sf_bln_rural %>% 
+  filter(rural == "1") %>% 
+  ggplot() + 
+  geom_sf(data = sf_bln_districts,
+          fill = "grey92",
+          color = "grey92",
+          lwd = 0.1) +
+  geom_sf(data = sf_bln_water,
+            fill = "#accdef",  
+            color = "#accdef") +
+  geom_sf(fill = "#669338", 
+            color = "#669338",
+            lwd = 0.1) +
+  # geom_sf(data = sf_bln_districts,
+  #         fill = NA,
+  #         color = "grey65",
+  #         lwd = 0.2) +     
+  annotate("text", x = 13.45, y = 52.344, 
+             hjust = 0.6, vjust = 1,
+             label = "Visualization by Cédric Scherer  •  Data by OpenStreetMap",
+             family = "Arvo", 
+             size = 4.5, 
+             color = "#669338",
+             fontface = "bold") +
+  labs(title = "<span style='color:#669338'>Rural Areas</span> in Berlin") +
+  theme(plot.background = element_rect(fill = "white", color = "white"),
+        panel.background = element_rect(fill = "white", color = "white"))
+
+ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas_v2.pdf"), 
+       width = 12, height = 10.59, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
