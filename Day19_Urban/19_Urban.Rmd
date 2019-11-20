@@ -94,6 +94,98 @@ ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas.pdf"),
        width = 16, height = 7.2, device = cairo_pdf)
 ```
 
+## Version without background map
+
+```{r light-map-bg, fig.width = 16, fig.height = 7.2}
+ggplot(sf_urban_areas) + 
+  library(maptools)
+data("wrld_simpl")
+
+sf_countries <- 
+  wrld_simpl %>% 
+  st_as_sf() %>% 
+  st_transform(crs = "+proj=moll")
+
+ggplot(sf_urban_areas) + 
+  geom_sf(data = sf_countries,
+          fill = "#071018",
+          color = "#071018",
+          lwd = 0.05) +
+  geom_sf(color = "#201e14", 
+         fill = NA,
+         size = 0.5) +
+  geom_sf(color = NA, 
+         fill = "#ffef9a",
+         size = 0.05) +
+  annotate(geom = "text", x = -12500000, y = -6000000, 
+           label = title, 
+           family = "Prata",
+           color = "#ffef9a",  ## v1: #d8d1a7
+           fontface = "bold",
+           size = 7.2,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -12500000, y = -6800000, 
+           label = subtitle, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "italic",
+           size = 2.9,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -12500000, y = -8000000, 
+           label = caption, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "bold",
+           size = 3.3,
+           hjust = 0.5) +
+  labs(x = NULL, y = NULL)
+
+ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas_bg.pdf"), 
+       width = 16, height = 8.1, device = cairo_pdf)
+```
+
+```{r}
+## handy vesion
+ggplot(sf_urban_areas) + 
+  geom_sf(color = "#201e14", 
+         fill = NA,
+         size = 0.5) +
+  geom_sf(color = NA, 
+         fill = "#ffef9a",
+         size = 0.05) +
+  annotate(geom = "text", x = 15700000, y = 1000000, 
+           label = title, 
+           family = "Prata",
+           color = "#ffef9a",  ## v1: #d8d1a7
+           fontface = "bold",
+           size = 6.2,
+           angle = 270,
+           hjust = 0.5) +
+  annotate(geom = "text", x = 15150000, y = 1000000, 
+           label = subtitle, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "italic",
+           size = 2.3,
+           angle = 270,
+           hjust = 0.5) +
+  annotate(geom = "text", x = -14200000, y = 1000000, 
+           label = caption, 
+           family = "Prata",
+           color = "#6a622f",  ## v1: #665903
+           fontface = "bold",
+           size = 3.3,
+           angle = 270,
+           hjust = 0.5) +
+  labs(x = NULL, y = NULL) +
+  theme(plot.background = element_rect(color = "#00101f"))
+
+ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas_wallpaper.pdf"), 
+       width = 16, height = 7.2, device = cairo_pdf)
+```
+
+## Dot map of urban centers
+
 ```{r dot-map, fig.width = 16, fig.height = 6.16}
 title_dot <- "The World's Urban Population"
 subtitle_dot <- "derived from 2002–2003 MODIS data at 1 km resolution"
