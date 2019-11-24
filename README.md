@@ -70,9 +70,16 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)<br>
 [... and other version of the "Light map" without land masses](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png)<br>
 
-### Day 19: Urban
+### Day 20: Rural
 ![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas.png)
 [... and a green version without roads](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
+
+### Day 21: Environment
+*coming soon*
+
+### Day 22: Built Environment
+![./Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png)
+[... and here is a blank version showing the builings only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
 
 ### Day 23: Population
 ![./Day23_Population/Population_ChangeGlobal_diff.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day23_Population/Population_ChangeGlobal_diff.png)
