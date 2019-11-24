@@ -65,13 +65,17 @@ theme_update(
 ```
 
 ```{r data-prep}
+## data source: https://opendata-esri-de.opendata.arcgis.com/datasets/ecf431fd8c394ee1b2fd7d54563e7b81_0?geometry=10.637%2C52.207%2C16.215%2C52.792
+
 sf_build_bln <-
   sf::read_sf(dsn = here::here("data", "Gebäude__Berlin", "Gebäude__Berlin.shp"), layer = "Gebäude__Berlin") 
 
+## crop to bounding box of Moabit district
 sf_build_moabit <-
   sf_build_bln %>% 
   st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985))
 
+## additional infos: green areas, roads, railways, water bodies
 sf_landuse_moabit <-
   sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_landuse_a_free_1.shp"), 
                               layer = "gis_osm_landuse_a_free_1") %>% 
