@@ -74,6 +74,13 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas.png)
 [... and a green version without roads](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
 
+### Day 23: Population
+![./Day23_Population/Population_ChangeGlobal_diff.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day23_Population/Population_ChangeGlobal_diff.png)
+[... and a version showing the projections for the coming 5 years](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day23_Population/Population_ChangeGlobal.png) and [for 20-year periods from 1950 to 2050](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day23_Population/Population_ChangeGlobal_facet.png)
+
+### Day 24: Statistics
+![./Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day24_Statistics/Statistics_MalariaDeaths.png)
+
 ***
 
 #### Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
