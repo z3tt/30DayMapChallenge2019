@@ -1,4 +1,4 @@
-# #30DayMapChallenge
+light# #30DayMapChallenge
 My contributions to the [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov.  
 Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [cedricphilippscherer@gmail.com](mailto:cedricphilippscherer@gmail.com).
 
@@ -68,7 +68,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 19: Urban
 ![./Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)<br>
 ![./Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)<br>
-[... and other version of the "Light map" without land masses](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png)<br>
+[... and another version of the "light map" without land masses](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png)<br>
 
 ### Day 20: Rural
 ![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas.png)
