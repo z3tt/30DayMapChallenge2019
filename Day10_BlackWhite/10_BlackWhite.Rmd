@@ -53,7 +53,7 @@ df_cities %>%
 ## Capital locations as sf object
 sf_capitals <-
   df_cities %>% 
-  ## clean in case there are more than 1 capital per coutnry
+  ## clean in case there are more than 1 capital per country
   mutate(
     capital = case_when(
       iso3 == "ZAF" & city != "Cape Town" ~ "not_primary",
