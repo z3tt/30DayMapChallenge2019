@@ -1,0 +1,170 @@
+---
+title: "#30DayMapChallenge Day 22: Built Environment - Berlin Buildings"
+author: "Cedric Scherer"
+date: "22th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(ggtext)
+library(showtext)
+
+font_add_google("Cinzel", "Cinzel")
+font_add_google("Roboto Mono", "Roboto Mono")
+
+theme_set(theme_minimal())
+
+theme_update(
+  axis.text = element_text(family = "Roboto Mono", 
+                           color = "grey30"),
+  axis.text.y = element_text(angle = 90),
+  panel.grid.minor = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.background = element_rect(color = NA, 
+                                  fill = "black"),
+  plot.background = element_rect(color = "grey30", 
+                                 fill = "black",
+                                 size = 30),
+  plot.margin = margin(50, 75, 50, 75),
+  plot.title = element_text(family = "Cinzel", 
+                            color = "grey60",
+                            size = 52,
+                            face = "bold",
+                            hjust = 0.5,
+                            margin = margin(t = 18, b = 18)),
+  plot.caption = element_text(family = "Cinzel", 
+                              color = "grey30",
+                              size = 12,
+                              face = "bold",
+                              hjust = 0.5,
+                              margin = margin(t = 18, b = 12)),
+  legend.position = "bottom",
+  legend.box.margin = margin(0.5, 0, 0, 0, "cm"), 
+  legend.box.spacing = unit(0.2, "cm"), 
+  legend.key.size = unit(2, "lines"),
+  legend.title = element_text(family = "Cinzel", 
+                             color = "grey60",
+                             size = 12,
+                             face = "bold"),
+  legend.text = element_text(family = "Cinzel", 
+                             color = "grey60",
+                             size = 10,
+                             face = "bold")
+)
+```
+
+```{r data-prep}
+sf_build_bln <-
+  sf::read_sf(dsn = here::here("data", "Gebäude__Berlin", "Gebäude__Berlin.shp"), layer = "Gebäude__Berlin") 
+
+sf_build_moabit <-
+  sf_build_bln %>% 
+  st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985))
+
+sf_landuse_moabit <-
+  sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_landuse_a_free_1.shp"), 
+                              layer = "gis_osm_landuse_a_free_1") %>% 
+  st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985))
+
+sf_roads_moabit <-
+  sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_roads_free_1.shp"), 
+                              layer = "gis_osm_roads_free_1") %>% 
+  st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985)) %>% 
+  filter(!fclass %in% c("steps", "bridleway", "pedestrian", "cycleway")) %>% 
+  mutate(size = ifelse(fclass %in% c("path", "footway"), "0.1", "0.2"))
+  
+sf_rails_moabit <-
+  sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_railways_free_1.shp"), 
+                              layer = "gis_osm_railways_free_1") %>% 
+  st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985))
+
+sf_water_moabit <- 
+  sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_water_a_free_1.shp"), 
+              layer = "gis_osm_water_a_free_1") %>% 
+  st_crop(c(xmin = 13.312183, ymin = 52.516297, xmax = 13.374943, ymax = 52.540985))
+
+```
+
+```{r map-moabit, fig.width = 12, fig.height = 10.92}
+sf_build_moabit %>% 
+  mutate(levels = if_else(AnzahlDerO > 7, "7", as.character(AnzahlDerO))) %>% 
+  ggplot() + 
+    geom_sf(data = sf_water_moabit,
+            color = "#182a33",
+            fill = "#182a33") +
+    geom_sf(data = sf_landuse_moabit %>% 
+              filter(fclass %in% c("park", "recreation_ground", "cemetery", "scrub", 
+                                   "forest", "heath", "allotments", "grass")),
+            color = NA,
+            fill = "#10211b") +
+    geom_sf(data = sf_rails_moabit,
+            color = "grey10",
+            size = 0.25) +
+    geom_sf(data = sf_roads_moabit,
+            aes(size = size),
+            color = "grey15") +
+    geom_sf(aes(fill = levels),
+            color = "black",
+            size = 0.05) +
+    rcartocolor::scale_fill_carto_d(palette = "SunsetDark", 
+                                    direction = -1,
+                                    name = "Above Ground Building Levels",
+                                    labels = c(as.character(1:6), "\u22657"),
+                                    na.translate = F) +
+    scale_size_manual(values = c(0.075, 0.3), guide = F) +
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0)) +
+    guides(fill = guide_legend(title.position = "top", 
+                               title.hjust = 0.5, nrow = 1,
+                               label.position = "bottom",
+                               override.aes = list(size = 5))) +
+    labs(title = "MOABIT",
+         caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap")
+                                    
+ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit.pdf"), 
+       width = 12, height = 10.92, device = cairo_pdf)
+```
+
+```{r map-moabit-blank, fig.width = 12, fig.height = 10.88}
+sf_build_moabit %>% 
+  mutate(levels = if_else(AnzahlDerO > 7, "7", as.character(AnzahlDerO))) %>% 
+  ggplot() + 
+    geom_sf(aes(fill = levels),
+            color = "black",
+            size = 0.05) +
+    rcartocolor::scale_fill_carto_d(palette = "SunsetDark", 
+                                    direction = -1,
+                                    name = "Above Ground Building Levels",
+                                    labels = c(as.character(1:6), "\u22657"),
+                                    na.translate = F) +
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0)) +
+    guides(fill = guide_legend(title.position = "top", 
+                               title.hjust = 0.5, nrow = 1,
+                               label.position = "bottom",
+                               override.aes = list(size = 5))) +
+    theme(axis.text.x = element_blank(),
+          axis.text.y = element_blank()) +
+    labs(title = "MOABIT",
+         caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap")
+                                    
+ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit_blank.pdf"), 
+       width = 12, height = 10.88, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
