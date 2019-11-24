@@ -17,7 +17,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = F)
 ```{r prep, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(sf)
-library(showtext)
 library(extrafont)
 
 extrafont::loadfonts()
@@ -81,6 +80,7 @@ sf_world_pop_growth <-
   filter(ISO_N3 != -99)
 ```
 
+## projection 2020-2025
 ```{r map-2020, fig.width = 18, fig.height = 11.9}
 sf_world_pop_growth %>% 
   filter(period == "2020–2025") %>% 
@@ -92,8 +92,10 @@ sf_world_pop_growth %>%
     )
   ) %>% 
   ggplot() +
-    geom_sf(color = NA,
-            fill = "white") +
+    geom_sf(data = sf_world,
+            color = "grey70",
+            fill = "grey80",
+            lwd = 0.1) +
     geom_sf(aes(color = change, 
                 fill = change), 
             lwd = 0.1,
@@ -138,6 +140,10 @@ sf_world_pop_growth %>%
     )
   ) %>% 
   ggplot() +
+    geom_sf(data = sf_world,
+            color = "grey70",
+            fill = "grey80",
+            lwd = 0.1) +
     geom_sf(aes(color = diff, 
                 fill = diff), 
             lwd = 0.1) +
@@ -186,11 +192,13 @@ sf_world_pop_growth %>%
   ) %>% 
   mutate(period = glue::glue("\n{period}–{period+20}")) %>% 
   ggplot() +
-    geom_sf(color = NA,
-            fill = "white") +
+    geom_sf(data = sf_world,
+            color = "grey70",
+            fill = "grey80",
+            lwd = 0.1) +
     geom_sf(aes(color = change,
                 fill = change),
-            lwd = 0.05,
+            lwd = 0.1,
             alpha = 0.9) +
     scale_x_continuous(breaks = seq(-180, 180, by = 30)) +
     scale_y_continuous(breaks = c(seq(-90, 90, by = 30))) +
