@@ -89,7 +89,7 @@ sf_bln_rural %>%
              fontface = "bold") +
       labs(title = "<span style='color:#d9aa6c'>Rural Areas</span> in Berlin")
 
-ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas2.pdf"), 
+ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas.pdf"), 
        width = 12, height = 10.59, device = cairo_pdf)
 ```
 
