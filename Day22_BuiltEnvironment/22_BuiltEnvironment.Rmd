@@ -126,7 +126,7 @@ sf_build_moabit %>%
                                     name = "Above Ground Building Levels",
                                     labels = c(as.character(1:6), "\u22657"),
                                     na.translate = F) +
-    scale_size_manual(values = c(0.075, 0.3), guide = F) +
+    scale_size_manual(values = c(0.125, 0.3), guide = F) +
     scale_x_continuous(expand = c(0, 0)) +
     scale_y_continuous(expand = c(0, 0)) +
     guides(fill = guide_legend(title.position = "top", 
@@ -134,7 +134,7 @@ sf_build_moabit %>%
                                label.position = "bottom",
                                override.aes = list(size = 5))) +
     labs(title = "MOABIT",
-         caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap")
+         caption = "Visualization by Cédric Scherer  •  Data by Geoportal Berlin")
                                     
 ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit.pdf"), 
        width = 12, height = 10.92, device = cairo_pdf)
@@ -161,10 +161,46 @@ sf_build_moabit %>%
     theme(axis.text.x = element_blank(),
           axis.text.y = element_blank()) +
     labs(title = "MOABIT",
-         caption = "Visualization by Cédric Scherer  •  Data by OpenStreetMap")
+         caption = "Visualization by Cédric Scherer  •  Data by Geoportal Berlin")
                                     
 ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit_blank.pdf"), 
        width = 12, height = 10.88, device = cairo_pdf)
+```
+
+```{r map-berlin, fig.width = 12, fig.height = 10.88}
+bln <- 
+  sf_build_bln %>% 
+  mutate(levels = if_else(AnzahlDerO > 10, 10, AnzahlDerO)) %>% 
+  ggplot() + 
+    geom_sf(aes(fill = levels),
+            color = NA) +
+    rcartocolor::scale_fill_carto_c(palette = "SunsetDark", 
+                                    direction = -1,
+                                    name = "Above Ground Building Levels in Berlin",
+                                    breaks = seq(1:10),
+                                    labels = c(as.character(1:9), "\u226510"),
+                                    na.value = "grey30") +
+    scale_x_continuous(expand = c(0.001, 0.001)) +
+    scale_y_continuous(expand = c(0.001, 0.001)) +
+    guides(fill = guide_colorbar(direction = "horizontal",
+                                 barheight = unit(3, units = "mm"), 
+                                 barwidth = unit(100, units = "mm"),
+                                 draw.ulim = FALSE, 
+                                 ticks.colour = "black",
+                                 title.position = 'top',
+                                 title.hjust = 0.5, 
+                                 label.hjust = 0.5)) +
+  labs(caption = "Visualization by Cédric Scherer  •  Data by Geoportal Berlin") +
+  theme(axis.text.x = element_blank(),
+        axis.text.y = element_blank(),
+        plot.caption = element_text(size = 8, margin = margin(t = 36)),
+        legend.position = c(0.5, 0.02),
+        legend.title = element_text(size = 10, color = "grey45"),
+        legend.text = element_text(color = "grey45"),
+        legend.key.size = unit(1.2, "lines"))
+
+ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BerlinBuildings.pdf"), 
+       plot = bln, width = 12, height = 9.88, device = cairo_pdf)
 ```
 
 ***
