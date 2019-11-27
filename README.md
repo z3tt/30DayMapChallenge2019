@@ -78,7 +78,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 *coming soon*
 
 ### Day 22: Built Environment
-![./Day22_BuiltEnvironment/BuiltEnv_BuildingsBerlin.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsBerlin.png)
+![./Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
 ![./Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png)
 [... and here is a blank version of Moabit showing the buildings only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
 
