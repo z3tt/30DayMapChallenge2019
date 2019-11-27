@@ -1,0 +1,151 @@
+---
+title: "#30DayMapChallenge Day 25: Climate - Köppen-Geiger Climate Zones"
+author: "Cedric Scherer"
+date: "25th of November 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(extrafont)
+
+extrafont::loadfonts()
+
+theme_set(theme_minimal())
+
+theme_update(
+  axis.ticks = element_blank(),
+  axis.text = element_blank(),
+  panel.grid.major = element_blank(),
+  panel.grid.minor = element_blank(),
+  panel.background = element_rect(color = NA, 
+                                  fill = "grey45"),
+  plot.background = element_rect(color = NA, 
+                                 fill = "grey45"),
+  plot.margin = margin(r = 20),
+  plot.title = element_text(family = "Varela Round", 
+                            color = "black",
+                            size = 42, 
+                            face = "bold",
+                            hjust = 0.5,
+                            margin = margin(t = 24, b = 6)),
+  plot.caption = element_text(family = "Varela Round", 
+                              color = "grey75", 
+                              size = 13, 
+                              face = "bold",
+                              hjust = 0.5,
+                              margin = margin(t = 0, b = 24)),
+  legend.position = "right",
+  legend.text = element_text(family = "Varela Round", 
+                             color = "grey75",
+                             size = 15,
+                             margin = margin(t = 6, b = 6)),
+  legend.key.width = unit(1.2, "lines"),
+  legend.key.height = unit(1.7, "lines")
+)
+```
+
+```{r data-prep}
+sf_climate <- sf::read_sf(dsn = here::here("_dev", "ClimateZones_Koppen_Geiger",
+                                           "world_climates_completed_koppen_geiger.shp"), 
+                          layer = "world_climates_completed_koppen_geiger")
+
+sf_climate_ext <-
+  sf_climate %>% 
+  mutate(
+    main = case_when(
+      str_detect(climates_f, "^A") ~ "Equatorial climates",
+      str_detect(climates_f, "^B") ~ "Arid climates",
+      str_detect(climates_f, "^C") ~ "Warm temperate climates",
+      str_detect(climates_f, "^D") ~ "Snow climates",
+      str_detect(climates_f, "^E") ~ "Polar climates",
+      TRUE ~ NA_character_
+    ),
+    type = case_when(
+      str_detect(climates_f, "^Af") ~ "Equatorial rainforest, fully humid",
+      str_detect(climates_f, "^Am") ~ "Equatorial monsoon",
+      str_detect(climates_f, "^As") ~ "Equatorial savannah with dry summer",
+      str_detect(climates_f, "^AW") ~ "Equatorial savannah with dry winter",
+      str_detect(climates_f, "^BS") ~ "Arid steppe climate",
+      str_detect(climates_f, "^Bs") ~ "Arid steppe climate",
+      str_detect(climates_f, "^BW") ~ "Arid desert climate",
+      str_detect(climates_f, "^Bw") ~ "Arid desert climate",
+      str_detect(climates_f, "^CS") ~ "Warm temperate climate with dry summer",
+      str_detect(climates_f, "^Cs") ~ "Warm temperate climate with dry summer",
+      str_detect(climates_f, "^Cw") ~ "Warm temperate climate with dry winter",
+      str_detect(climates_f, "^Cf") ~ "Warm temperate climate, fully humid",
+      str_detect(climates_f, "^Ds") ~ "Snow climate with dry summer",
+      str_detect(climates_f, "^Dw") ~ "Snow climate with dry winter",
+      str_detect(climates_f, "^Df") ~ "Snow climate, fully humid",
+      str_detect(climates_f, "ET") ~ "Polar tundra climate",
+      str_detect(climates_f, "EF") ~ "Polar frost climate",
+      TRUE ~ NA_character_
+    ),
+    type = factor(type, levels = c(
+      "Equatorial rainforest, fully humid",
+      "Equatorial monsoon",
+      "Equatorial savannah with dry summer",
+      "Equatorial savannah with dry winter",
+      "Arid steppe climate",
+      "Arid desert climate",
+      "Warm temperate climate with dry summer",
+      "Warm temperate climate with dry winter",
+      "Warm temperate climate, fully humid",
+      "Snow climate with dry summer",
+      "Snow climate with dry winter",
+      "Snow climate, fully humid",
+      "Polar tundra climate",
+      "Polar frost climate",
+      TRUE ~ NA_character_
+    ))
+  ) %>% 
+  filter(!is.na(type))
+```
+
+```{r map-2020, fig.width = 18, fig.height = 8.08}
+# losely based on cartocolor palette "Earth"
+#cols <- c("#A16928", "#caa873", "#edeac2", "#98b7b2", "#2887a1")
+cols <- c("#4f3314", "#784e1e", "#a16928", "#ca8432",
+          "#ca9273", "#d8af98",
+          "#e7daae", "#dbd787", "#cbcf60",
+          "#b6ccca", "#98b7b4", "#7aa29e",
+          "#36b9cd", "#2890a0")
+
+clim <- 
+  sf_climate_ext %>% 
+  ggplot() +
+    geom_sf(aes(fill = type,
+                color = type),
+            lwd = 0.05, 
+            show.legend = "point") +
+    scale_x_continuous(limits = c(-180, 180),
+                       expand = c(0.02, 0.02)) +
+    scale_color_manual(values = cols,
+                       name = NULL) +
+    scale_fill_manual(values = cols,                                  
+                      name = NULL) +
+    guides(fill = guide_legend(override.aes = list(size = 6))) +
+    labs(x = NULL, y = NULL,
+         title = "                                 Köppen-Geiger Climate Classification",
+         subtitle = NULL,
+         caption = "                                                                                                           Visualization by Cédric Scherer  •  Data by Kottek et al. 2006 (DOI: 10.1127/0941-2948/2006/0130)")
+
+ggsave(here::here("Day25_Climate", "Climate_KoppenGeiger.pdf"),
+       plot = clim, width = 18, height = 8.09, device = cairo_pdf)
+```
+
+***
+  
+```{r session-info}
+sessionInfo()
+```
