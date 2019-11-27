@@ -78,8 +78,9 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 *coming soon*
 
 ### Day 22: Built Environment
+![./Day22_BuiltEnvironment/BuiltEnv_BuildingsBerlin.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsBerlin.png)
 ![./Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png)
-[... and here is a blank version showing the builings only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
+[... and here is a blank version of Moabit showing the buildings only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
 
 ### Day 23: Population
 ![./Day23_Population/Population_ChangeGlobal_diff.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day23_Population/Population_ChangeGlobal_diff.png)
@@ -87,6 +88,15 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 
 ### Day 24: Statistics
 ![./Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day24_Statistics/Statistics_MalariaDeaths.png)
+
+### Day 25: Climate
+![./Day25_Climate/Climate_KoppenGeiger.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day25_Climate/Climate_KoppenGeiger.png)
+
+### Day 26: Hydrology
+![./Day26_Hydrology/Hydrology_WorldRivers.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day26_Hydrology/Hydrology_WorldRivers.png)
+
+### Day 27: Resources
+![./Day27_Resources/Resources_eMobilityBerlin.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day27_Resources/Resources_eMobilityBerlin.png)
 
 ***
 
