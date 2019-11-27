@@ -1,0 +1,86 @@
+---
+title: "#30DayMapChallenge Day 26: Hydrology - Koppen-Geiger Climate Zones"
+author: "Cedric Scherer"
+date: "26th of November 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(sf)
+library(extrafont)
+library(showtext)
+
+font_add_google("Alex Brush", "Alex Brush")
+
+extrafont::loadfonts()
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(color = NA, 
+                                  fill = "#000026"),
+  plot.background = element_rect(color = "#00003a", 
+                                 fill = "#00003a")
+)
+```
+
+```{r data}
+sf_rivers <-
+  sf::read_sf(dsn = here::here("data", "world_rivers_dSe.json"))
+
+sf_ocean <-
+  rnaturalearth::ne_download(scale = 10, 
+                             category = "physical", 
+                             type = "ocean",
+                             returnclass = "sf")
+```
+
+```{r map, fig.width = 18, fig.height = 10.17}
+sf_rivers %>% 
+  arrange(StrokeWeig) %>% 
+  ggplot() + 
+    geom_sf(aes(size = StrokeWeig, 
+                color = StrokeWeig)) +
+    geom_sf(data = sf_ocean, fill = "#00003a", color = NA) + 
+    scale_x_continuous(expand = c(0, 0)) +
+    scale_y_continuous(expand = c(0, 0),
+                       limits = c(-110, NA)) +
+    rcartocolor::scale_color_carto_c(palette = "Teal", 
+                                     direction = -1,
+                                     guide = F) +
+    scale_size(range = c(0.1, 0.4),
+               guide = F) +
+  annotate("text", x = 0, y = -89.5, 
+             hjust = 0.5, vjust = 1,
+             label = "The Rivers of the World",
+             family = "Alex Brush", 
+             size = 18,
+             fontface = "bold",
+             color = "#a1d7d6") +
+  annotate("text", x = 0, y = -103, 
+             hjust = 0.5, vjust = 1,
+             label = "Visualization by Cédric Scherer  ∙  Data by Natural Earth",
+             family = "Alex Brush", 
+             size = 5.5,
+             fontface = "bold",
+             color = "#599bae")
+
+ggsave(here::here("Day26_Hydrology", "Hydrology_WorldRivers.pdf"),
+       width = 18, height = 10.17, device = cairo_pdf)
+```
+
+***
+  
+```{r session-info}
+sessionInfo()
+```
