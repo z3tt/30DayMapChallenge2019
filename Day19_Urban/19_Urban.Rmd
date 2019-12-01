@@ -223,8 +223,8 @@ ggplot(sf_urban_lands) +
              labels = c("  1k  ", "  1m  ", "  5m  ", "  10m  ", "  20m  ")) +  #0.1, 5
   coord_equal() +
   guides(size = guide_legend(title.position = "top", 
-                                title.hjust = 0.5, nrow = 1,
-                                label.position = "bottom")) +
+                             title.hjust = 0.5, nrow = 1,
+                             label.position = "bottom")) +
   theme(legend.position = c(0.945, 0.95),
         legend.title = element_text(family = "Prata",
                                     color = "#8d833f",
