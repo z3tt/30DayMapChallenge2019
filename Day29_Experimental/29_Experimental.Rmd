@@ -67,11 +67,11 @@ theme_update(
 
 ```{r data-prep}
 df_popgrid <-
-  readr::read_csv(here::here("_dev", "gpwv4-2015-merc.csv"))
+  readr::read_csv(here::here("data", "gpwv4-2015-merc.csv"))
 
 df_popgrid_clean <-
   df_popgrid %>% 
-  filter(!(x < 260 & y < 260), y < 1500)
+  filter(z == 11)
 ```
 
 ```{r map, fig.width = 18, fig.height = 11}
@@ -87,14 +87,14 @@ x25 <-
                   interval_size = 3.2) + 
     #stat_summary(fun.y = median, geom = "point", size = 1, color = "#71144b") + 
     scale_color_manual(values = c("#ebeae1", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
-                       name = "Population distribution per 25 km latitudinal stripe",
+                       name = "Population distribution per latitudinal stripe",
                        labels = c("100%", "75%", "50%", "25%", "10%")) +
     guides(color = guide_legend(title.position = "left", 
                                 title.hjust = 0.5, ncol = 1,
                                 label.position = "right",
                                 reverse = T)) +
     labs(title = "World Population Stripes",
-         subtitle = "This map shows the world population along a latitudinal gradient from North to South. Each stripe represents the distribution of the human population and covers 25 km in width.",
+         subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and covers approx. 1900 km in width at the Equator.",
          caption = "Visualization by Cédric Scherer  •  Data by NASA's Socioeconomic Data and Applications Center (SEDAC)")
 
 ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals.pdf"), 
@@ -113,7 +113,7 @@ x10 <-
     stat_interval(.width = c(.1, .25, .5, .75, 1),
                   interval_size = 1) + 
     scale_color_manual(values = c("#edecdf", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
-                       name = "Population distribution per 10 km latitudinal stripe",
+                       name = "Population distribution per latitudinal stripe",
                        labels = c("100%", "75%", "50%", "25%", "10%")) +
     guides(color = guide_legend(title.position = "left", 
                                 title.hjust = 0.5, ncol = 1,
@@ -135,7 +135,7 @@ x50 <-
     stat_interval(.width = c(.1, .25, .5, .75, 1),
                   interval_size = 6) + 
     scale_color_manual(values = c("#f1efdb", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
-                       name = "Population distribution per 50 km latitudinal stripe",
+                       name = "Population distribution per latitudinal stripe",
                        labels = c("100%", "75%", "50%", "25%", "10%")) +
     guides(color = guide_legend(title.position = "left", 
                                 title.hjust = 0.5, ncol = 1,
