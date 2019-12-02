@@ -1,0 +1,157 @@
+---
+title: "#30DayMapChallenge Day 29: Experimental - Population Stripes"
+author: "Cedric Scherer"
+date: "29th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep}
+library(tidyverse)
+library(sf)
+library(tidybayes)
+library(showtext)
+
+font_add_google("Oswald", "Oswald")
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(fill = "#cfcbc3", 
+                                  color = "#cfcbc3"),
+  plot.background = element_rect(fill = "#cfcbc3", 
+                                 color = "grey25",
+                                 size = 8),
+  plot.margin = margin(20, 30, 20, 30),
+  plot.title = element_text(family = "Oswald", 
+                            color = "grey25",
+                            size = 32,
+                            face = "bold",
+                            hjust = 0.45,
+                            margin = margin(t = 6, b = 2)),
+  plot.subtitle = element_text(family = "Oswald", 
+                               color = "grey55",
+                               size = 16,
+                               hjust = 0.15,
+                            margin = margin(t = 2, b = 6)),
+  plot.caption = element_text(family = "Oswald", 
+                              color = "grey55",
+                              size = 12,
+                              hjust = 0.44,
+                              margin = margin(t = 20, b = 6)),
+  legend.position = "left",
+  legend.key.width = unit(0.3, "lines"),
+  legend.key.height = unit(5, "lines"),
+  legend.spacing = unit(0.05, "cm"),
+  legend.title = element_text(family = "Oswald", 
+                              color = "grey25",
+                              size = 16,
+                              face = "bold",
+                              angle = 90),
+  legend.text = element_text(family = "Oswald", 
+                             color = "grey55",
+                             size = 12,
+                             hjust = 0,
+                             vjust = 0.5),
+  legend.margin = margin(0.2, 0.6, 0.2, 0.2, "cm")
+)
+```
+
+```{r data-prep}
+df_popgrid <-
+  readr::read_csv(here::here("_dev", "gpwv4-2015-merc.csv"))
+
+df_popgrid_clean <-
+  df_popgrid %>% 
+  filter(!(x < 260 & y < 260), y < 1500)
+```
+
+```{r map, fig.width = 18, fig.height = 11}
+x25 <-
+  df_popgrid_clean %>%   
+    mutate(
+    x_factor = factor(x %/% 25),
+    pop_k = floor(population / 1000)
+  ) %>% 
+  uncount(pop_k) %>% 
+  ggplot(aes(x_factor, -y)) + 
+    stat_interval(.width = c(.1, .25, .5, .75, 1),
+                  interval_size = 3.2) + 
+    #stat_summary(fun.y = median, geom = "point", size = 1, color = "#71144b") + 
+    scale_color_manual(values = c("#ebeae1", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
+                       name = "Population distribution per 25 km latitudinal stripe",
+                       labels = c("100%", "75%", "50%", "25%", "10%")) +
+    guides(color = guide_legend(title.position = "left", 
+                                title.hjust = 0.5, ncol = 1,
+                                label.position = "right",
+                                reverse = T)) +
+    labs(title = "World Population Stripes",
+         subtitle = "This map shows the world population along a latitudinal gradient from North to South. Each stripe represents the distribution of the human population and covers 25 km in width.",
+         caption = "Visualization by Cédric Scherer  •  Data by NASA's Socioeconomic Data and Applications Center (SEDAC)")
+
+ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals.pdf"), 
+       plot = x25, width = 18, height = 11, device = cairo_pdf)
+```
+
+```{r facet, fig.width = 18, fig.height = 30}
+x10 <-
+  df_popgrid_clean %>% 
+  mutate(
+    x_factor = factor(x %/% 10),
+    pop_k = floor(population / 1000)
+  ) %>% 
+  uncount(pop_k) %>% 
+  ggplot(aes(x_factor, -y)) + 
+    stat_interval(.width = c(.1, .25, .5, .75, 1),
+                  interval_size = 1) + 
+    scale_color_manual(values = c("#edecdf", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
+                       name = "Population distribution per 10 km latitudinal stripe",
+                       labels = c("100%", "75%", "50%", "25%", "10%")) +
+    guides(color = guide_legend(title.position = "left", 
+                                title.hjust = 0.5, ncol = 1,
+                                label.position = "right",
+                                reverse = T)) +
+  labs(title = "World Population Stripes")
+
+x25_f <-
+  x25 + labs(title = NULL, subtitle = NULL, caption = NULL)
+
+x50 <-
+  df_popgrid_clean %>% 
+  mutate(
+    x_factor = factor(x %/% 50),
+    pop_k = floor(population / 1000)
+  ) %>% 
+  uncount(pop_k) %>% 
+  ggplot(aes(x_factor, -y)) + 
+    stat_interval(.width = c(.1, .25, .5, .75, 1),
+                  interval_size = 6) + 
+    scale_color_manual(values = c("#f1efdb", "#f8d9af", "#ffb793", "#f56965", "#d92864"),
+                       name = "Population distribution per 50 km latitudinal stripe",
+                       labels = c("100%", "75%", "50%", "25%", "10%")) +
+    guides(color = guide_legend(title.position = "left", 
+                                title.hjust = 0.5, ncol = 1,
+                                label.position = "right",
+                                reverse = T)) +
+    labs(caption = "Visualization by Cédric Scherer  •  Data by the Socioeconomic Data and Applications Center (SEDAC)")
+
+library(patchwork)
+facet <- x10 + x25_f + x50 + plot_layout(ncol = 1)
+
+ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals_facet.pdf"), 
+       plot = facet, width = 18, height = 30, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
