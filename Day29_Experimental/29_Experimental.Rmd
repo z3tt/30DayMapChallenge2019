@@ -94,7 +94,7 @@ x25 <-
                                 label.position = "right",
                                 reverse = T)) +
     labs(title = "World Population Stripes",
-         subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and covers approx. 1900 km in width at the Equator.",
+         subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and has a width of approx. 490 km at the Equator.",
          caption = "Visualization by Cédric Scherer  •  Data by NASA's Socioeconomic Data and Applications Center (SEDAC)")
 
 ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals.pdf"), 
