@@ -1,0 +1,108 @@
+---
+title: "#30DayMapChallenge Day 27: Resources - Berlin Charging Stations"
+author: "Cedric Scherer"
+date: "27th of October 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep}
+library(tidyverse)
+library(sf)
+library(ggtext)
+
+font_add_google("Crete Round", "Crete Round")
+
+theme_set(theme_void())
+
+theme_update(
+  panel.background = element_rect(fill = "grey80", 
+                                  color = "grey80"),
+  plot.background = element_rect(fill = "grey80", 
+                                 color = "grey30",
+                                 size = 10),
+  plot.margin = margin(20, 30, 20, 30),
+  plot.title = element_text(family = "Crete Round", 
+                            color = "#d29c14",
+                            size = 38,
+                            face = "bold.italic",
+                            hjust = 0.5,
+                            margin = margin(t = 20, b = 2))
+)
+```
+
+```{r data-prep}
+df_emobil <-
+ readxl::read_xlsx(here::here("data", "ladesaeulen_bnetza_und_be_emobil.xlsx")) 
+
+sf_emobil <- 
+  st_as_sf(df_emobil, 
+           coords = c("x_wert", "y_wert"), 
+           crs = "+init=epsg:25833")
+
+sf_bln_districts <- 
+  sf::read_sf(dsn = here::here("data", "Bezirke__Berlin", "Bezirke__Berlin.shp"), 
+              layer = "Bezirke__Berlin") %>% 
+  st_transform(crs = "+init=epsg:25833")
+
+sf_bln_roads <- 
+  sf::read_sf(dsn = here::here("data", "osm_berlin_shp", "gis_osm_roads_free_1.shp"), 
+              layer = "gis_osm_roads_free_1") %>% 
+  st_transform(crs = "+init=epsg:25833") %>% 
+  filter(!fclass %in% c("bridleway", "footway", "path", "pedestrian", "steps", "cycleway")) %>% 
+  st_intersection(sf_bln_districts)
+```
+
+```{r map, fig.width = 12, fig.height = 10.55}
+e <- ggplot() + 
+  geom_sf(data = sf_bln_districts, 
+          color = "grey70",
+          fill = NA,
+          lwd = 6) +
+  geom_sf(data = sf_bln_districts, 
+          color = "grey70",
+          fill = "grey30",
+          lwd = 0.9) + 
+  geom_sf(data = sf_bln_roads,
+          color = "grey24",
+          lwd = 0.1) +
+  geom_sf(data = sf_bln_districts, 
+          color = "grey80",
+          fill = NA,
+          lwd = 0.9) + 
+  geom_sf(data = sf_emobil,
+          color = "#edc00d",
+          size = 4.5,
+          alpha = 0.3) +
+  geom_sf(data = sf_emobil,
+          color = "#6f603e",
+          fill = "#d29c14",
+          size = 0.7,
+          shape = 21,
+          stroke = 0.01) +
+  annotate("text", x = 390477, y = 5801900, 
+           hjust = 0.5, vjust = 1,
+           label = "Visualization by Cédric Scherer  •  Data by Berlin Open Data & OpenStreetMap",
+           family = "Crete Round", 
+           size = 4, 
+           color = "grey55",
+           fontface = "bold.italic") +
+  labs(title = "Where can I charge my electric car in Berlin?")
+
+ggsave(here::here("Day27_Resources", "Resources_eMobilityBerlin.pdf"), plot = e,
+       width = 12, height = 10.55, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```

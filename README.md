@@ -75,7 +75,7 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 [... and a green version without roads](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
 
 ### Day 21: Environment
-*coming soon*
+![./Day21_Environment/21_Environment_NationalParksUS.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day21_Environment/21_Environment_NationalParksUS.png)
 
 ### Day 22: Built Environment
 ![./Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
@@ -98,8 +98,14 @@ Feedback is very welcome via [@CedScherer](https://twitter.com/cedscherer) or [c
 ### Day 27: Resources
 ![./Day27_Resources/Resources_eMobilityBerlin.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day27_Resources/Resources_eMobilityBerlin.png)
 
+### Day 28: Funny
+*coming soon*
+
 ### Day 29: Experimental
 ![./Day29_Experimental/Experimental_PopIntervals.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day29_Experimental/Experimental_PopIntervals.png)
+
+### Day 30: Home
+*coming soon*
 
 ***
 

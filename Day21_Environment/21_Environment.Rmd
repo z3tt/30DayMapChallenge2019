@@ -1,0 +1,261 @@
+---
+title: "#30DayMapChallenge Day 21: Environment - Koppen-Geiger Climate Zones"
+author: "Cedric Scherer"
+date: "2nd of January 2020"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+```{r prep, message=FALSE, warning=FALSE}
+## packages
+library(tidyverse)
+library(sf)
+library(raster)
+library(elevatr)
+library(showtext)
+
+font_add_google("Carter One", "Carter One")
+```
+
+```{r map-data}
+## national park visits
+df_nps <- 
+  readr::read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-09-17/national_parks.csv") %>% 
+  mutate(year = as.numeric(year))
+
+## us states
+sf_us_map <- 
+  st_as_sf(maps::map("state", fill = T, plot = F)) %>% 
+  lwgeom::st_make_valid()
+
+## us rivers
+sf_us_rivers <-
+  rnaturalearth::ne_download(scale = 10,
+                             category = "physical",
+                             type = "rivers_lake_centerlines",
+                             returnclass = "sf") %>%
+  st_intersection(sf_us_map)
+
+## us parks
+sf_us_parks <-
+  sf::read_sf(dsn = here::here("data", "National Parks.geojson"))
+
+## elevation data
+m <- data.frame(x = c(-125, -67), y = c(24.9, 49.6))
+dem <- get_elev_raster(m, z = 4, 
+                       prj = st_crs(sf_us_map)$proj4string, 
+                       clip = "bbox")
+
+## hillshade
+slope = terrain(dem, opt = 'slope')
+aspect = terrain(dem, opt = 'aspect')
+hill = hillShade(slope, aspect, 40, 270)
+
+sf_dem_us <- st_as_sf(as(hill, "SpatialPixelsDataFrame")) %>% 
+  st_intersection(sf_us_map)
+
+df_dem_us <- tibble(
+  x = st_coordinates(sf_dem_us)[,1],
+  y = st_coordinates(sf_dem_us)[,2],
+  z = sf_dem_us$layer
+)
+
+## national parks shapefile
+sf_nps <- sf::read_sf(dsn = here::here("data", "nps_boundary_centroids", 
+                                       "nps_boundary_centroids.shp"), 
+                      layer = "nps_boundary_centroids") %>% 
+  st_transform(crs = "+proj=longlat +datum=WGS84 +no_defs") %>% 
+  st_intersection(sf_us_map)
+
+## join df and sf of np visits
+sf_nps_join <-
+  df_nps %>%
+  filter(year >= 2000) %>% 
+  group_by(gnis_id, unit_code, unit_name, unit_type) %>% 
+  summarize(visitors = round(mean(visitors, na.rm = T))) %>% 
+  ungroup() %>% 
+  arrange(-visitors) %>% 
+  left_join(sf_nps, by = c("gnis_id" = "GNIS_ID")) %>% 
+  filter(unit_type %in% c("National Park", "National Preserve", 
+                          "National Lakeshore", "National Seashore")) %>% 
+  mutate(top = if_else(row_number() <= 10, row_number(), NA_integer_)) %>% 
+  st_as_sf()
+```
+
+```{r annotation-data}
+## legend
+legend <-
+  tibble(
+    x = rep(-73, 4),
+    y = rep(28, 4),
+    #quant = quantile(sf_nps_join$visitors),
+    visitors = c(1000, 1000000, 5000000, 10000000)
+  ) %>% 
+  st_as_sf(coords = c("x", "y"), 
+           crs = st_crs(sf_us_map))
+
+legend_text <-
+  tibble(
+    x = rep(-73.2, 5),
+    y = c(seq(26.35, 28, length.out = 4), 29.2),
+    text = c("10 M", "5 M", "1 M", "1,000", "Visitors\nper Year")
+  ) %>% 
+  st_as_sf(coords = c("x", "y"), 
+           crs = st_crs(sf_us_map))
+
+## top 10 table
+table_prep <-
+  df_nps %>%
+  filter(
+    year >= 2000,
+    unit_type %in% c("National Park", "National Preserve", 
+                     "National Lakeshore", "National Seashore")
+  ) %>% 
+  group_by(gnis_id, unit_code, unit_name, unit_type) %>% 
+  summarize(visitors = round(mean(visitors, na.rm = T))) %>% 
+  ungroup() %>% 
+  top_n(10, visitors) %>% 
+  arrange(-visitors)
+
+table_text <-
+  table_prep %>% 
+  mutate(
+    x = rep(-121.7, 10), 
+    y = rev(seq(25, 30, length.out = 10)),
+    label = glue::glue("{unit_name}  ({format(visitors, big.mark = ',', trim = T)} visitors)")
+  ) %>% 
+  st_as_sf(coords = c("x", "y"), 
+           crs = st_crs(sf_us_map))
+
+table_rank <-
+  table_prep %>% 
+  mutate(
+    x = rep(-122.1, 10), 
+    y = rev(seq(25, 30, length.out = 10)),
+    label = glue::glue("{1:10}.")
+  ) %>% 
+  st_as_sf(coords = c("x", "y"), 
+           crs = st_crs(sf_us_map))
+```
+
+```{r hillshade-map, fig.width = 15, fig.height = 10.1}
+ggplot(sf_us_rivers) + 
+  ## base dots
+  geom_sf(data = sf_nps_join, 
+          aes(size = visitors), 
+          color = "grey85") +
+  ## hillshade
+  geom_raster(data = df_dem_us, 
+              aes(x, y, fill = z)) + 
+  ## rivers
+  geom_sf(color = "#bde8ff", #b5cbf6 d6f1ff
+          size = 0.1) +
+  ## green dots
+  geom_sf(data = sf_nps_join, 
+          aes(size = visitors), 
+          color = "#598b59", 
+          alpha = 0.35) +
+  geom_sf(data = sf_nps_join, 
+          aes(size = visitors), 
+          shape = 21, 
+          color = "#315b31", 
+          fill = NA) +
+  geom_sf_text(data = sf_nps_join,
+               aes(label = top),
+               family = "Carter One",
+               color = "#073807",
+               size = 4) +
+  ## legend
+  geom_sf(data = legend, 
+          aes(size = visitors), 
+          shape = 21,
+          color = NA,
+          fill = "grey85") +
+  geom_sf(data = legend, 
+          aes(size = visitors), 
+          color = "#598b59", 
+          alpha = 0.2) +
+  geom_sf(data = legend, 
+          aes(size = visitors), 
+          shape = 21, 
+          color = "#315b31", 
+          fill = NA) +
+  geom_rect(xmin = -76, 
+            xmax = -73, 
+            ymin = 25, 
+            ymax = 31, 
+            fill = "grey40", 
+            color = NA) +
+  geom_sf_text(data = legend_text,
+            aes(label = text), 
+            color = "#073807",
+            size = 3.8,
+            family = "Carter One",
+            lineheight = 0.7,
+            hjust = 1) +
+  ## top parks
+  geom_sf_text(data = table_rank,
+            aes(label = label), 
+            color = "#073807",
+            size = 3,
+            family = "Carter One",
+            hjust = 1) +
+  geom_sf_text(data = table_text,
+            aes(label = label), 
+            color = "#073807", #598b59
+            size = 3,
+            family = "Carter One",
+            hjust = 0) +
+  ## scales
+  scale_y_continuous(expand = c(0.1, 0.1)) +
+  scale_fill_gradient(low = "#7b6643",  #ddd0c9 9f8e6f
+                      high = "white", 
+                      guide = F) +
+  scale_size(range = c(2.5, 35), 
+             guide = F) + 
+  labs(x = NULL, y = NULL,
+       title = "US National Parks Visitation 2000-2016",
+       subtitle = "Visitors per Year of National Parks, National Preserves, National Lakeshores and National Seashores in the US",
+       caption = "Visualization by Cédric Scherer  ∙  Data by data.world & Natural Earth") +
+  ## theme
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        panel.grid = element_blank(),
+        plot.margin = margin(12, 12, 12, 12),
+        plot.title = element_text(family = "Carter One", 
+                                  color = "#073807",
+                                  size = 36,
+                                  face = "bold",
+                                  hjust = 0.5,
+                                  margin = margin(t = 5, b = 1)),
+        plot.subtitle = element_text(family = "Carter One", 
+                                     color = "#073807",
+                                     size = 16,
+                                     hjust = 0.5,
+                                     margin = margin(t = 0, b = 10)),
+        plot.caption = element_text(family = "Carter One", 
+                                    color = "#598b59",
+                                    size = 12,
+                                    hjust = 0.5,
+                                    margin = margin(t = 10, b = 5)),
+        panel.background = element_rect(fill = "grey40", 
+                                        color = "#073807", 
+                                        size = 5))
+
+ggsave(here::here("Day21_Environment", "21_Environment_NationalParksUS.pdf"), 
+       width = 15, height = 10.1, device = cairo_pdf)
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
