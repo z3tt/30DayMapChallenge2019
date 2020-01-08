@@ -251,7 +251,9 @@ map_conflict_c <-
           aes(geometry = geometry, 
               fill = conflict_percent),
           color = "transparent", size = 0.1) +
-  labs(subtitle = "War & Conflicts")
+  labs(subtitle = "War & Conflicts") +
+  theme(plot.background = element_rect(fill = NA, color = NA),
+        panel.background = element_rect(fill = NA, color = NA))
 ```
 
 ```{r full-panel, fig.width = 18, fig.height = 12.5}
