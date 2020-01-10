@@ -1,5 +1,5 @@
 <h1 style="font-weight:normal" align="center">
-  &nbsp;🌍 #30DayMapChallenge Contributions&nbsp;
+  &nbsp;#30DayMapChallenge Contributions&nbsp;
 </h1>
 
 <div align="center">
