@@ -27,7 +27,7 @@ Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [mail]
 ![./data/30daymapchallenge.jpg](https://github.com/Z3tt/30daymapchallenge/blob/master/data/30daymapchallenge.jpg)
 
 <details>
-  <summary>List of All Contributions (click to expand)</summary>
+  <summary><b>List of All Contributions</b> (click to expand)</summary>
 
 <!-- toc -->
 * Day 1: [Points](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day01_Points)
