@@ -250,7 +250,7 @@ ggplot(sf_us_rivers) +
                                         color = "#073807", 
                                         size = 5))
 
-ggsave(here::here("Day21_Environment", "21_Environment_NationalParksUS.pdf"), 
+ggsave(here::here("Day21_Environment", "Environment_NationalParksUS.pdf"), 
        width = 15, height = 10.1, device = cairo_pdf)
 ```
 

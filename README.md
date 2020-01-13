@@ -133,7 +133,7 @@ Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [mail]
 [... and a green version without roads](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
 
 ### Day 21: Environment
-![./Day21_Environment/21_Environment_NationalParksUS.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day21_Environment/21_Environment_NationalParksUS.png)
+![./Day21_Environment/21_Environment_NationalParksUS.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day21_Environment/Environment_NationalParksUS.png)
 
 ### Day 22: Built Environment
 ![./Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
