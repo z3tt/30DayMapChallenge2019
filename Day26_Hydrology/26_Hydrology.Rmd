@@ -17,12 +17,9 @@ knitr::opts_chunk$set(echo = TRUE, warning = F)
 ```{r prep, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(sf)
-library(extrafont)
 library(showtext)
 
 font_add_google("Alex Brush", "Alex Brush")
-
-extrafont::loadfonts()
 
 theme_set(theme_void())
 
