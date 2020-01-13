@@ -1,0 +1,68 @@
+---
+title: "#30DayMapChallenge Day 5: Raster - DGM of Germany by Federal Agency for Cartography and Geodesy"
+author: "Cedric Scherer"
+date: "5th of November 2019"
+output:
+  html_document:
+  theme: paper
+highlight: kate
+editor_options:
+  chunk_output_type: console
+---
+  
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = F)
+```
+
+
+```{r prep}
+library(tidyverse)
+library(raster)
+library(landscapetools)
+library(extrafont)
+
+extrafont::loadfonts()
+```
+
+```{r data}
+dgm <- raster(here::here("data", "dgm200", "dgm200", "dgm200_utm32s.asc"))
+```
+
+```{r plot}
+
+png(here::here("contributions", "Day05_Raster", "Raster_GermanyDGM.png"), 
+    width = 1500, height = 1900, res = 300) 
+
+show_landscape(dgm) +
+  rcartocolor::scale_fill_carto_c(palette = "Earth", 
+  #scico::scale_fill_scico(palette = "bamako",
+                                  name = "Topography of Germany", 
+                                  na.value = "white",
+                                  breaks = seq(0, 3000, by = 500),
+                                  labels = glue::glue("{seq(0, 3000, by = 500)}m")) +
+  guides(fill = guide_colorbar(barheight = unit(3, units = "mm"),  
+                               barwidth = unit(90, units = "mm"),
+                               direction = "horizontal",
+                               ticks.colour = "white",
+                               title.position = "top",
+                               title.hjust = 0.5)) +
+  theme(axis.title = element_blank(),
+        axis.ticks = element_blank(),
+        axis.text = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        legend.position = "top",
+        legend.title = element_text("Bitter", face = "bold"),
+        legend.text = element_text("Roboto Mono"),
+        plot.caption = element_text(family = "Bitter", color = "grey35", size = 5, hjust = 0.5)) +
+  labs(caption = "Visualization by Cédric Scherer  •  Data by Federal Agency for Cartography and Geodesy of Germany")
+
+dev.off()
+```
+
+***
+
+```{r session-info}
+sessionInfo()
+```
+
