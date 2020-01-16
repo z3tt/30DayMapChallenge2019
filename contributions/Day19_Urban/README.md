@@ -1,9 +1,9 @@
 ### Day 19: Urban
-Topic: Urban Areas of the World
+**Topic:** Urban Areas of the World
 <br>
-Data: [Natural Earth](https://www.google.com/search?client=firefox-b-d&q=naturalearth)
+**Data:** [Natural Earth](https://www.google.com/search?client=firefox-b-d&q=naturalearth)
 <br>
-Tool: R (ggplot2, sf, rnaturalearth, showtext)
+**Tool:** R (`ggplot2`, `sf`, `rnaturalearth`, `showtext`)
 <br><br>
 **"Light Map" with Countries as Dark Shadows:**
 <br>

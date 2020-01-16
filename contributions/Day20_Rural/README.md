@@ -1,9 +1,9 @@
 ### Day 20: Rural
-Topic: Berlin Rural Areas
+**Topic:** Berlin Rural Areas
 <br>
-Data: [OpenStreetMap contributors](https://www.openstreetmap.org/)
+**Data:** [OpenStreetMap contributors](https://www.openstreetmap.org/)
 <br>
-Tool: R (ggplot2, sf, ggtext, showtext)
+**Tool:** R (`ggplot2`, `sf`, `ggtext`, `showtext`)
 <br><br>
 ![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day20_Rural/Rural_BerlinRuralAreas.png)
 <br><br>

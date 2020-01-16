@@ -1,9 +1,9 @@
 ### Day 8: Green
-Topic: Berlin Railway Stations (S-Bahn)
+**Topic:** Berlin Railway Stations (S-Bahn)
 <br>
-Data: [OpenStreetMap contributors](https://www.openstreetmap.org/)
+**Data:** [OpenStreetMap contributors](https://www.openstreetmap.org/)
 <br>
-Tool: R (ggplot2, sf, ggtext, extrafont)
+**Tool:** R (`ggplot2`, `sf`, `ggtext`, `extrafont`)
 <br><br>
 ![./Day08_Green/Green_BerlinRailway.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day08_Green/Green_BerlinRailway.png)
 <br><br>

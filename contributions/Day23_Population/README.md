@@ -1,9 +1,9 @@
 ### Day 23: Population
-Topic: Global Population Growth Rates
+**Topic:** Global Population Growth Rates
 <br>
-Data: [United Nations](https://population.un.org/wup/Download/)
+**Data:** [United Nations](https://population.un.org/wup/Download/)
 <br>
-Tool: R (ggplot2, sf, rworldmap, extrafont)
+**Tool:** R (`ggplot2`, `sf`, `rworldmap`, `extrafont`)
 <br><br>
 **Changes 1950-1955 versus 2015-2020:**
 <br>

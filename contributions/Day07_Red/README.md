@@ -1,9 +1,9 @@
 ### Day 7: Red
-Topic: Berlin Tram Stations
+**Topic:** Berlin Tram Stations
 <br>
-Data: [OpenStreetMap contributors](https://www.openstreetmap.org/)
+**Data:** [OpenStreetMap contributors](https://www.openstreetmap.org/)
 <br>
-Tool: R (ggplot2, sf, ggtext, extrafont)
+**Tool:** R (`ggplot2`, `sf`, `ggtext`, `extrafont`)
 <br><br>
 ![./Day07_Red/Red_BerlinTram.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day07_Red/Red_BerlinTram.png)
 <br><br>
