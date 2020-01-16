@@ -1,5 +1,5 @@
 ### Day 4: Hexagons
-**Topic:** Status and Trends in the Education of Racial and Ethnic Groups in the US
+Status and Trends in the Education of Racial and Ethnic Groups in the US
 <br>
 **Data:** [National Center for Statistics (NCES)](https://nces.ed.gov/programs/raceindicators/index.asp)
 <br>

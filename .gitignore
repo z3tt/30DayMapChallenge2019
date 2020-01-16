@@ -35,9 +35,6 @@ vignettes/*.pdf
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 
-# ignore dev folder
-*_dev/
-
 # ignore large files
 dgm200_utm32s.asc
 Rotics_et_al_2018_white_storks.Rds
