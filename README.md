@@ -120,17 +120,6 @@ Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [mail]
 ![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day17_Zones/Zones_TimezonesEarth.png)
 [... and another version with filled countries only](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day17_Zones/Zones_TimezonesEarth_countries.png)
 
-*
-*
-*
-*
-*
-*
-* Day 25: [Climate](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day25_Climate)
-*
-* Day 27: [Resources](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day27_Resources)
-* Day 29: [Experimental](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day29_Experimental)
-
 ### Day 18: [Globe](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day18_Globe)
 ![./Day18_Globe/Globe_Projections.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day18_Globe/Globe_Projections.png)
 
