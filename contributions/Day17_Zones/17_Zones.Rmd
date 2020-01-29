@@ -18,7 +18,6 @@ knitr::opts_chunk$set(echo = TRUE, warning = F)
 library(tidyverse)
 library(sf)
 library(ggtext)
-library(LaCroixColoR)
 library(extrafont)
 
 extrafont::loadfonts()
