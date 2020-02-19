@@ -177,8 +177,9 @@ ggplot(sf_us_rivers) +
   geom_sf(data = legend, 
           aes(size = visitors), 
           shape = 21,
-          color = NA,
-          fill = "grey85") +
+          color = "grey85",
+          fill = "grey85",
+          stroke = 0.01) +
   geom_sf(data = legend, 
           aes(size = visitors), 
           color = "#598b59", 
@@ -217,7 +218,7 @@ ggplot(sf_us_rivers) +
   ## scales
   scale_y_continuous(expand = c(0.1, 0.1)) +
   scale_fill_gradient(low = "#7b6643",  #ddd0c9 9f8e6f
-                      high = "white", 
+                      high = "white",
                       guide = F) +
   scale_size(range = c(2.5, 35), 
              guide = F) + 
@@ -250,7 +251,7 @@ ggplot(sf_us_rivers) +
                                         color = "#073807", 
                                         size = 5))
 
-ggsave(here::here("Day21_Environment", "Environment_NationalParksUS.pdf"), 
+ggsave(here::here("contributions", "Day21_Environment", "Environment_NationalParksUS.pdf"), 
        width = 15, height = 10.1, device = cairo_pdf)
 ```
 
