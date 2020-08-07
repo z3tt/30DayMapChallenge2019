@@ -5,4 +5,4 @@
 <br>
 **Tool:** R (`ggplot2`, `sf`, `biscale`, `rworldmap`, `cowplot`, `extrafont`)
 <br><br>
-![./Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day24_Statistics/Statistics_MalariaDeaths.png)
+![./contributions/Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Dcontributions/ay24_Statistics/Statistics_MalariaDeaths.png)
