@@ -5,6 +5,6 @@
 <br>
 **Tool:** R (`ggplot2`, `sf`, `rnaturalearth`, `ggtext`, LaCroixColoR, `extrafont`)
 <br><br>
-![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth.png)
+![./contributions/Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day17_Zones/Zones_TimezonesEarth.png)
 <br><br>
-![./Day17_Zones/Zones_TimezonesEarth_countries.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day17_Zones/Zones_TimezonesEarth_countries.png)
+![./contributions/Day17_Zones/Zones_TimezonesEarth_countries.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day17_Zones/Zones_TimezonesEarth_countries.png)
