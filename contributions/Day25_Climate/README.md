@@ -5,4 +5,4 @@
 <br>
 **Tool:** R (`ggplot2`, `sf`, `extrafont`)
 <br><br>
-![./Day25_Climate/Climate_KoppenGeiger.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day25_Climate/Climate_KoppenGeiger.png)
+![./contributions/Day25_Climate/Climate_KoppenGeiger.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day25_Climate/Climate_KoppenGeiger.png)
