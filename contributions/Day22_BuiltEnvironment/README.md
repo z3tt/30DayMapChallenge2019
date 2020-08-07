@@ -11,4 +11,4 @@
 <br><br>
 **Berlin (~500.000 buildings):**
 <br>
-![./contributions/Day22_BuiltEnvironment/BuiltEnv_Buildings.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day22_BuiltEnvironment/BuiltEnv_Buildings.png)
+![./contributions/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
