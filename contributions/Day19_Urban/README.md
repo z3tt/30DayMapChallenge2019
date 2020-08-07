@@ -7,12 +7,12 @@
 <br><br>
 **"Light Map" with Countries as Dark Shadows:**
 <br>
-![./Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)
+![./contributions/Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)
 <br><br>
 **Without Countries:**
 <br>
-![./Day19_Urban/Urban_GlobalUrbanAreasg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanAreas.png)
+![./contributions/Day19_Urban/Urban_GlobalUrbanAreasg.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas.png)
 <br><br>
 **Dot Map of Urban Lands:**
 <br>
-![./Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day19_Urban/Urban_GlobalUrbanLands.png)
+![./contributions/Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day19_Urban/Urban_GlobalUrbanLands.png)
