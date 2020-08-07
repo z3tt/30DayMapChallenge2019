@@ -5,4 +5,4 @@
 <br>
 **Tool:** R (`ggplot2`, `sf`, `rnaturalearth`, `ggforce`, `extrafont`)
 <br><br>
-![./Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day16_Places/Places_ExtremesEarth.png)
+![./contributions/Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day16_Places/Places_ExtremesEarth.png)
