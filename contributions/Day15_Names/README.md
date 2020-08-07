@@ -5,4 +5,4 @@
 <br>
 **Tool:** R (`ggplot2`, `sf`, `ggtext`, `showtext`)
 <br><br>
-![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/Day15_Names/Names_BerlinRoads.png)
+![./contributions/Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day15_Names/Names_BerlinRoads.png)
