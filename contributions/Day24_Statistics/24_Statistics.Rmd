@@ -121,7 +121,7 @@ map_legend <-
   draw_plot(bi_map, 0, 0, 1, 1) +
   draw_plot(legend, 0.15, 0.25, 0.2, 0.2)
 
-ggsave(here::here("Day24_Statistics", "Statistics_MalariaDeaths.pdf"),
+ggsave(here::here("contributions", "Day24_Statistics", "Statistics_MalariaDeaths.pdf"),
        plot = map_legend, width = 15, height = 16.5, device = cairo_pdf)
 ```
 

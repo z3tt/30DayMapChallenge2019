@@ -140,7 +140,7 @@ clim <-
          subtitle = NULL,
          caption = "                                                                                                           Visualization by Cédric Scherer  •  Data by Kottek et al. 2006 (DOI: 10.1127/0941-2948/2006/0130)")
 
-ggsave(here::here("Day25_Climate", "Climate_KoppenGeiger.pdf"),
+ggsave(here::here("contributions", "Day25_Climate", "Climate_KoppenGeiger.pdf"),
        plot = clim, width = 18, height = 8.09, device = cairo_pdf)
 ```
 

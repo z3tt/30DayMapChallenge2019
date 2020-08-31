@@ -119,7 +119,7 @@ sf_bln_roads_classified %>%
     labs(title = "NAMES OF ROADS IN BERLIN",
          caption = '¹ Road type names that are related to close-by water bodies, i.e. **"See"**, **"Ufer"**, and **"Steg"**<br>² Other road type names include for example **"Promenade"**, **"Pfad"**, **"Ring"**, **"Zeile"**, **"Gasse"**, **"Brücke"**, **"Graben"**, and **Hof**')
 
-ggsave(here::here("Day15_Names", "Names_BerlinRoads.pdf"), 
+ggsave(here::here("contributions", "Day15_Names", "Names_BerlinRoads.pdf"), 
        width = 12, height = 11.63, device = cairo_pdf)
 ```
 

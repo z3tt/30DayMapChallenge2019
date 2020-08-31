@@ -88,7 +88,7 @@ sf_bln_roads_classified %>%
     labs(title = "Moving through Berlin by Bike",
          subtitle = "Road network of Berlin showing streets designated for <b style='color:#00c121'>cyclists</b> and <b style='color:#8fb0b0'>car drivers</b>")
 
-ggsave(here::here("Day12_Movement", "Movement_BerlinByBike.pdf"), 
+ggsave(here::here("contributions", "Day12_Movement", "Movement_BerlinByBike.pdf"), 
        width = 12, height = 10.8, device = cairo_pdf)
 ```
 

@@ -89,7 +89,7 @@ sf_bln_rural %>%
              fontface = "bold") +
       labs(title = "<span style='color:#d9aa6c'>Rural Areas</span> in Berlin")
 
-ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas.pdf"), 
+ggsave(here::here("contributions", "Day20_Rural", "Rural_BerlinRuralAreas.pdf"), 
        width = 12, height = 10.59, device = cairo_pdf)
 ```
 
@@ -122,7 +122,7 @@ sf_bln_rural %>%
   theme(plot.background = element_rect(fill = "white", color = "white"),
         panel.background = element_rect(fill = "white", color = "white"))
 
-ggsave(here::here("Day20_Rural", "Rural_BerlinRuralAreas_v2.pdf"), 
+ggsave(here::here("contributions", "Day20_Rural", "Rural_BerlinRuralAreas_v2.pdf"), 
        width = 12, height = 10.59, device = cairo_pdf)
 ```
 

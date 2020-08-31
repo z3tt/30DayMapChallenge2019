@@ -72,7 +72,7 @@ sf_rivers %>%
              fontface = "bold",
              color = "#599bae")
 
-ggsave(here::here("Day26_Hydrology", "Hydrology_WorldRivers.pdf"),
+ggsave(here::here("contributions", "Day26_Hydrology", "Hydrology_WorldRivers.pdf"),
        width = 18, height = 10.17, device = cairo_pdf)
 ```
 

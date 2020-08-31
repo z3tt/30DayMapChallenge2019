@@ -228,7 +228,7 @@ ggplot(sf_regions) +
        subtitle = "Extreme values of measured air temperature and elevation per continent and depth per ocean.\nGlobal extremes are higlighted in white with additional information.",
        caption = "Visualization by Cédric Scherer  •  Data by Wikipedia")
 
-ggsave(here::here("Day16_Places", "Places_ExtremesEarth.pdf"), 
+ggsave(here::here("contributions", "Day16_Places", "Places_ExtremesEarth.pdf"), 
        width = 18, height = 12.2, device = cairo_pdf)
 ```
 

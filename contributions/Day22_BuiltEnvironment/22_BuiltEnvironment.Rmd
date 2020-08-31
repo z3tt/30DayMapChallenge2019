@@ -136,7 +136,7 @@ sf_build_moabit %>%
     labs(title = "MOABIT",
          caption = "Visualization by Cédric Scherer  •  Data by Geoportal Berlin")
                                     
-ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit.pdf"), 
+ggsave(here::here("contributions", "Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit.pdf"), 
        width = 12, height = 10.92, device = cairo_pdf)
 ```
 
@@ -163,7 +163,7 @@ sf_build_moabit %>%
     labs(title = "MOABIT",
          caption = "Visualization by Cédric Scherer  •  Data by Geoportal Berlin")
                                     
-ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit_blank.pdf"), 
+ggsave(here::here("contributions", "Day22_BuiltEnvironment", "BuiltEnv_BuildingsMoabit_blank.pdf"), 
        width = 12, height = 10.88, device = cairo_pdf)
 ```
 
@@ -199,7 +199,7 @@ bln <-
         legend.text = element_text(color = "grey45"),
         legend.key.size = unit(1.2, "lines"))
 
-ggsave(here::here("Day22_BuiltEnvironment", "BuiltEnv_BerlinBuildings.pdf"), 
+ggsave(here::here("contributions", "Day22_BuiltEnvironment", "BuiltEnv_BerlinBuildings.pdf"), 
        plot = bln, width = 12, height = 9.88, device = cairo_pdf)
 ```
 

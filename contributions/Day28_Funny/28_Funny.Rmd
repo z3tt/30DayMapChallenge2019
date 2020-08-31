@@ -97,7 +97,7 @@ e <- ggplot() +
            fontface = "bold.italic") +
   labs(title = "Where can I charge my electric car in Berlin?")
 
-ggsave(here::here("Day27_Resources", "Resources_eMobilityBerlin.pdf"), plot = e,
+ggsave(here::here("contributions", "Day27_Resources", "Resources_eMobilityBerlin.pdf"), plot = e,
        width = 12, height = 10.55, device = cairo_pdf)
 ```
 

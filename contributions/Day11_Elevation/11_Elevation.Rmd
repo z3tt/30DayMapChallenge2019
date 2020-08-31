@@ -32,7 +32,7 @@ ambmat <- ambient_shade(elmat)
 ```
 
 ```{r 2D-plot-custom}
-pdf(here::here("Day11_Elevation", "Elevation_Rayshader_custom.pdf")) 
+pdf(here::here("contributions", "Day11_Elevation", "Elevation_Rayshader_custom.pdf")) 
 
 elmat %>%
   #sphere_shade(texture = create_texture("#fbfbfb", "#967d64", "#647D4B", "#fbfbfb", "#446b44"), ## v2

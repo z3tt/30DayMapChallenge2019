@@ -83,7 +83,7 @@ ggplot(sf_tz) +
   labs(title = "<span style='color:#D72000'>The</span> <span style='color:#EE6100'>Time</span> <span style='color:#FFAD0A'>Zones</span> <span style='color:#1BB6AF'>of</span> <span style='color:#1C3181'>the</span> <span style='color:#800080'>World</span>",
        caption = "<span style='color:#D72000'>Visualization:</span> <span style='color:#EE6100'>Cédric</span> <span style='color:#FFAD0A'>Scherer</span>  •  <span style='color:#1BB6AF'>Data:</span> <span style='color:#1C3181'>Natural</span> <span style='color:#800080'>Earth</span>")
 
-ggsave(here::here("Day17_Zones", "Zones_TimezonesEarth.pdf"), 
+ggsave(here::here("contributions", "Day17_Zones", "Zones_TimezonesEarth.pdf"), 
        width = 18, height = 10.9, device = cairo_pdf)
 ```
 
@@ -111,7 +111,7 @@ ggplot(sf_tz) +
   labs(title = "<span style='color:#D72000'>The</span> <span style='color:#EE6100'>Time</span> <span style='color:#FFAD0A'>Zones</span> <span style='color:#1BB6AF'>of</span> <span style='color:#1C3181'>the</span> <span style='color:#800080'>World</span>",
        caption = "<span style='color:#D72000'>Visualization:</span> <span style='color:#EE6100'>Cédric</span> <span style='color:#FFAD0A'>Scherer</span>  •  <span style='color:#1BB6AF'>Data:</span> <span style='color:#1C3181'>Natural</span> <span style='color:#800080'>Earth</span>")
 
-ggsave(here::here("Day17_Zones", "Zones_TimezonesEarth_countries.pdf"), 
+ggsave(here::here("contributions", "Day17_Zones", "Zones_TimezonesEarth_countries.pdf"), 
        width = 18, height = 10.9, device = cairo_pdf)
 ```
 

@@ -90,7 +90,7 @@ ggplot(sf_urban_areas) +
            hjust = 0.5) +
   labs(x = NULL, y = NULL)
 
-ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas.pdf"), 
+ggsave(here::here("contributions", "Day19_Urban", "Urban_GlobalUrbanAreas.pdf"), 
        width = 16, height = 7.2, device = cairo_pdf)
 ```
 
@@ -140,7 +140,7 @@ ggplot(sf_urban_areas) +
            hjust = 0.5) +
   labs(x = NULL, y = NULL)
 
-ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas_bg.pdf"), 
+ggsave(here::here("contributions", "Day19_Urban", "Urban_GlobalUrbanAreas_bg.pdf"), 
        width = 16, height = 8.1, device = cairo_pdf)
 ```
 
@@ -180,7 +180,7 @@ ggplot(sf_urban_areas) +
   labs(x = NULL, y = NULL) +
   theme(plot.background = element_rect(color = "#00101f"))
 
-ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanAreas_wallpaper.pdf"), 
+ggsave(here::here("contributions", "Day19_Urban", "Urban_GlobalUrbanAreas_wallpaper.pdf"), 
        width = 16, height = 7.2, device = cairo_pdf)
 ```
 
@@ -235,7 +235,7 @@ ggplot(sf_urban_lands) +
                                    size = 6),
         legend.key.height = unit(0.1, "lines"))
 
-ggsave(here::here("Day19_Urban", "Urban_GlobalUrbanLands.pdf"), 
+ggsave(here::here("contributions", "Day19_Urban", "Urban_GlobalUrbanLands.pdf"), 
        width = 16, height = 6.16, device = cairo_pdf)
 ```
 

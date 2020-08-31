@@ -185,7 +185,7 @@ sf_storks_clean %>%
          subtitle = 'Tracking data of adult white storks (<i>Ciconia ciconia</i>) for the years 2014–2016. The position of the storks has been estimated via GPS every 5 minutes.<br>The stork with the ID 2421/HH847, lovingly called "Gili", travelled the furthest distance all the way from South Africa back to Germany.',
          caption = '<br><br>Rotics S., Kaatz M., Turjeman S., Zurell D., Wikelski M., Sapir N., Eggers U., Fiedler W., Jeltsch F. & Nathan R. (2018)<br>Early arrival at breeding grounds: Causes, costs and a trade-off with overwintering latitude. <i>J. Anim. Ecol.</i> <b>87</b>:1627–1638. doi: 10.1111/1365-2656.12898.<br><br><br>Visualization by Cédric Scherer')
 
-ggsave(here::here("Day13_Tracks", "Tracks_StorksGili.pdf"),
+ggsave(here::here("contributions", "Day13_Tracks", "Tracks_StorksGili.pdf"),
        width = 15, height = 11.3, device = cairo_pdf)
 ```
 

@@ -97,7 +97,7 @@ x25 <-
          subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and has a width of approx. 490 km at the Equator.",
          caption = "Visualization by Cédric Scherer  •  Data by NASA's Socioeconomic Data and Applications Center (SEDAC)")
 
-ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals.pdf"), 
+ggsave(here::here("contributions", "Day29_Experimental", "Experimental_PopIntervals.pdf"), 
        plot = x25, width = 18, height = 11, device = cairo_pdf)
 ```
 
@@ -146,7 +146,7 @@ x50 <-
 library(patchwork)
 facet <- x10 + x25_f + x50 + plot_layout(ncol = 1)
 
-ggsave(here::here("Day29_Experimental", "Experimental_PopIntervals_facet.pdf"), 
+ggsave(here::here("contributions", "Day29_Experimental", "Experimental_PopIntervals_facet.pdf"), 
        plot = facet, width = 18, height = 30, device = cairo_pdf)
 ```
 
