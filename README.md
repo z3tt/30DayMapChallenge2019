@@ -165,13 +165,13 @@ Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [mail]
 ![./Day27_Resources/Resources_eMobilityBerlin.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day27_Resources/Resources_eMobilityBerlin.png)
 
 ### Day 28: [Resources](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day28_Funny)
-*coming soon*
+*coming soon?* 🤷
 
 ### Day 29: [Experimental](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day29_Experimental)
 ![./Day29_Experimental/Experimental_PopIntervals.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day29_Experimental/Experimental_PopIntervals.png)
 
 ### Day 30: [Home](https://github.com/Z3tt/30DayMapChallenge/tree/master/contributions/Day30_Home)
-*coming soon*
+*coming soon?* 🤷
 
 ***
 
