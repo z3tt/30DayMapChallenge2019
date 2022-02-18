@@ -36,12 +36,13 @@ theme_update(
                             size = 32,
                             face = "bold",
                             hjust = 0.45,
-                            margin = margin(t = 6, b = 2)),
+                            margin = margin(t = 6, b = 10)),
   plot.subtitle = element_text(family = "Oswald", 
                                color = "grey55",
                                size = 16,
                                hjust = 0.15,
-                            margin = margin(t = 2, b = 6)),
+                               lineheight = 1.1,
+                               margin = margin(t = 2, b = 6)),
   plot.caption = element_text(family = "Oswald", 
                               color = "grey55",
                               size = 12,
@@ -94,7 +95,7 @@ x25 <-
                                 label.position = "right",
                                 reverse = T)) +
     labs(title = "World Population Stripes",
-         subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and has a width of approx. 490 km at the Equator.",
+         subtitle = "This map shows the world population along a latitudinal gradient. Each stripe represents the distribution of the human population and has a width of approx. 490 km at the Equator.\nThe length of each stripe indicates the maximum latitudinal range of humans and the colors encode the main x % of all population within each stripe.",
          caption = "Visualization by Cédric Scherer  •  Data by NASA's Socioeconomic Data and Applications Center (SEDAC)")
 
 ggsave(here::here("contributions", "Day29_Experimental", "Experimental_PopIntervals.pdf"), 
