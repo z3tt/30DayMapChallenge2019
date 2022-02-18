@@ -5,7 +5,7 @@
 <div align="center">
 
 &nbsp;&nbsp;&nbsp;
-<a href="https://www-cedricscherer.com"><img border="0" alt="Blog" src="https://assets.dryicons.com/uploads/icon/svg/4926/home.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
+<a href="https://www.cedricscherer.com"><img border="0" alt="Blog" src="https://assets.dryicons.com/uploads/icon/svg/4926/home.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 <a href="mailto:info@data-vizard.com"><img border="0" alt="Email" src="https://assets.dryicons.com/uploads/icon/svg/8009/02dc3a5c-6504-4347-85fb-3f510cfecc45.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 <a href="https://twitter.com/CedScherer"><img border="0" alt="Twitter" src="https://assets.dryicons.com/uploads/icon/svg/8385/c23f7ffc-ca8d-4246-8978-ce9f6d5bcc99.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp; 
 <a href="https://www.instagram.com/cedscherer/"><img border="0" alt="Instagram" src="https://assets.dryicons.com/uploads/icon/svg/8330/62263227-bb78-4b42-a9a9-e222e0cc7b97.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
@@ -13,7 +13,7 @@
 <a href="https://www.linkedin.com/in/cedricpscherer/"><img border="0" alt="LinkedIn" src="https://assets.dryicons.com/uploads/icon/svg/8337/a347cd89-1662-4421-be90-58e5e8004eae.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 <a href="https://www.buymeacoffee.com/z3tt"><img border="0" alt="BuyMeACoffee" src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 
-My contributions to the [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov. Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [email](mailto:cedricphilippscherer@gmail.com).
+My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov. Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [email](mailto:cedricphilippscherer@gmail.com).
 
 </div>
 
