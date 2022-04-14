@@ -133,6 +133,9 @@ ggplot(sf_world_borders) +
        subtitle = "by number of unique countries each shares a land border with",
        caption = "Visualization by Cédric Scherer  •  Data by Wikipedia")
 
+ggsave(here::here("contributions", "Day14_Boundaries", "Boundaries_GlobalNeighbors.svg"),
+       width = 18, height = 11.74)
+
 ggsave(here::here("contributions", "Day14_Boundaries", "Boundaries_GlobalNeighbors.pdf"),
        width = 18, height = 11.74, device = cairo_pdf)
 ```
