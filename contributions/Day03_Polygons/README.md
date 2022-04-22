@@ -9,4 +9,4 @@
 <br><br>
 ![./Day03_Polygons/Polygons_Alcohol_Drugs.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day03_Polygons/Polygons_Alcohol_Drugs.png)
 <br><br>
-![./Day03_Polygons/Polygons_GlobalMortality_Chloropleth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day03_Polygons/Polygons_GlobalMortality_Chloropleth.png)
+![./Day03_Polygons/Polygons_GlobalMortality_Choropleth.png](https://raw.githubusercontent.com/Z3tt/30DayMapChallenge/master/contributions/Day03_Polygons/Polygons_GlobalMortality_Choropleth.png)
