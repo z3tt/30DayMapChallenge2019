@@ -13,7 +13,7 @@
 <a href="https://www.linkedin.com/in/cedricpscherer/"><img border="0" alt="LinkedIn" src="https://assets.dryicons.com/uploads/icon/svg/8337/a347cd89-1662-4421-be90-58e5e8004eae.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 <a href="https://www.buymeacoffee.com/z3tt"><img border="0" alt="BuyMeACoffee" src="https://www.buymeacoffee.com/assets/img/guidelines/logo-mark-3.svg" width="35" height="35"></a>&nbsp;&nbsp;&nbsp;
 
-My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov. Feedback is very welcome via [Twitter](https://twitter.com/cedscherer) or [email](mailto:cedricphilippscherer@gmail.com).
+My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/status/1187713840550744066) initiated by Topi Tjukanov. 
 
 </div>
 
