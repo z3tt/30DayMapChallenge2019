@@ -17,145 +17,145 @@ My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/
 
 </div>
 
-![./data/30daymapchallenge.jpg](https://github.com/z3tt/30DayMapChallenge2021/blob/master/data/30daymapchallenge.jpg)
+![./data/30daymapchallenge.jpg](https://github.com/z3tt/30DayMapChallenge2019/blob/master/data/30daymapchallenge.jpg)
 
 <details>
   <summary><b>List of All Contributions</b> (click to expand)</summary>
 
 <!-- toc -->
-* Day 1: [Points](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day01_Points)
-* Day 2: [Lines](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day02_Lines)
-* Day 3: [Polygons](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day03_Polygons)
-* Day 4: [Hexagons](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day04_Hexagons)
-* Day 5: [Raster](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day05_Raster)
-* Day 6: [Blue](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day06_Blue)
-* Day 7: [Red](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day07_Red)
-* Day 8: [Green](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day08_Green)
-* Day 9: [Yellow](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day09_Yellow)
-* Day 10: [Black & White](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day10_BlackWhite)
-* Day 11: [Elevation](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day11_Elevation)
-* Day 12: [Movement](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day12_Movement)
-* Day 13: [Tracks](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day13_Tracks)
-* Day 14: [Boundaries](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day14_Boundaries)
-* Day 15: [Names](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day15_Names)
-* Day 16: [Places](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day16_Places)
-* Day 17: [Zones](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day17_Zones)
-* Day 18: [Globe](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day18_Globe)
-* Day 19: [Urban](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day19_Urban)
-* Day 20: [Rural](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day20_Rural)
-* Day 21: [Environment](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day21_Environment)
-* Day 22: [Built Environment](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day22_BuiltEnvironment)
-* Day 23: [Population](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day23_Population)
-* Day 24: [Statistics](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day24_Statistics)
-* Day 25: [Climate](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day25_Climate)
-* Day 26: [Hydrology](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day26_Hydrology)
-* Day 27: [Resources](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day27_Resources)
-* Day 29: [Experimental](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day29_Experimental)
+* Day 1: [Points](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day01_Points)
+* Day 2: [Lines](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day02_Lines)
+* Day 3: [Polygons](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day03_Polygons)
+* Day 4: [Hexagons](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day04_Hexagons)
+* Day 5: [Raster](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day05_Raster)
+* Day 6: [Blue](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day06_Blue)
+* Day 7: [Red](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day07_Red)
+* Day 8: [Green](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day08_Green)
+* Day 9: [Yellow](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day09_Yellow)
+* Day 10: [Black & White](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day10_BlackWhite)
+* Day 11: [Elevation](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day11_Elevation)
+* Day 12: [Movement](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day12_Movement)
+* Day 13: [Tracks](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day13_Tracks)
+* Day 14: [Boundaries](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day14_Boundaries)
+* Day 15: [Names](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day15_Names)
+* Day 16: [Places](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day16_Places)
+* Day 17: [Zones](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day17_Zones)
+* Day 18: [Globe](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day18_Globe)
+* Day 19: [Urban](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day19_Urban)
+* Day 20: [Rural](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day20_Rural)
+* Day 21: [Environment](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day21_Environment)
+* Day 22: [Built Environment](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day22_BuiltEnvironment)
+* Day 23: [Population](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day23_Population)
+* Day 24: [Statistics](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day24_Statistics)
+* Day 25: [Climate](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day25_Climate)
+* Day 26: [Hydrology](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day26_Hydrology)
+* Day 27: [Resources](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day27_Resources)
+* Day 29: [Experimental](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day29_Experimental)
 <!-- tocstop -->
 
 </details>
 
 ***
 
-### Day 1: [Points](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day01_Points)
-![./Day01_Points/Points_Squirrels.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day01_Points/Points_Squirrels.png)
+### Day 1: [Points](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day01_Points)
+![./Day01_Points/Points_Squirrels.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day01_Points/Points_Squirrels.png)
 
-### Day 2: [Lines](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day02_Lines)
-![./Day02_Lines/Lines_OSMnx_Kiez.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day02_Lines/Lines_OSMnx_Kiez.png)
+### Day 2: [Lines](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day02_Lines)
+![./Day02_Lines/Lines_OSMnx_Kiez.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day02_Lines/Lines_OSMnx_Kiez.png)
 
-### Day 3: [Polygons](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day03_Polygons)
-![./Day03_Polygons/Polygons_GlobalMortality.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day03_Polygons/Polygons_GlobalMortality.png)
+### Day 3: [Polygons](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day03_Polygons)
+![./Day03_Polygons/Polygons_GlobalMortality.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day03_Polygons/Polygons_GlobalMortality.png)
 <br>
-[... and a version showing deaths due to alcohol and drug disorder](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day03_Polygons/Polygons_Alcohol_Drugs.png)
+[... and a version showing deaths due to alcohol and drug disorder](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day03_Polygons/Polygons_Alcohol_Drugs.png)
 
-### Day 4: [Hexagons](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day04_Hexagons)
-![./Day04_Hexagons/Hexagons_SchoolDiversity_hex.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day04_Hexagons/Hexagons_SchoolDiversity_hex.png)
+### Day 4: [Hexagons](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day04_Hexagons)
+![./Day04_Hexagons/Hexagons_SchoolDiversity_hex.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day04_Hexagons/Hexagons_SchoolDiversity_hex.png)
 <br>
-[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day04_Hexagons/Hexagons_SchoolDiversity_hex_1994.png)
+[... and a version showing diversity indices for the school year 1994/95 with the same color scale for comparison](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day04_Hexagons/Hexagons_SchoolDiversity_hex_1994.png)
 
-### Day 5: [Raster](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day05_Raster)
-![./Day05_Raster/Raster_GermanyDGM.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day05_Raster/Raster_GermanyDGM.png)
+### Day 5: [Raster](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day05_Raster)
+![./Day05_Raster/Raster_GermanyDGM.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day05_Raster/Raster_GermanyDGM.png)
 
-### Days 6 to 9: [Blue](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day06_Blue), [Green](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day08_Green), [Red](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day07_Red) & [Yellow](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day09_Yellow)
-![./Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png)
+### Days 6 to 9: [Blue](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day06_Blue), [Green](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day08_Green), [Red](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day07_Red) & [Yellow](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day09_Yellow)
+![./Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day09_Yellow/BlueRedGreenYellow_BerlinPublicTransport.png)
 <br>
-[Day 6: Blue](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day06_Blue/Blue_BerlinMetro.png) | [Day 7: Red](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day07_Red/Red_BerlinTram.png) | [Day 8: Green](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day08_Green/Green_BerlinRailway.png) | [Day 9: Yellow](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day09_Yellow/Yellow_BerlinBus.png)
+[Day 6: Blue](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day06_Blue/Blue_BerlinMetro.png) | [Day 7: Red](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day07_Red/Red_BerlinTram.png) | [Day 8: Green](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day08_Green/Green_BerlinRailway.png) | [Day 9: Yellow](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day09_Yellow/Yellow_BerlinBus.png)
 
-### Day 10: [Black & White](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day10_BlackWhite)
-![./Day10_BlackWhite/BlackWhite_CapitalPop_bw.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day10_BlackWhite/BlackWhite_CapitalPop_bw.png)
+### Day 10: [Black & White](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day10_BlackWhite)
+![./Day10_BlackWhite/BlackWhite_CapitalPop_bw.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day10_BlackWhite/BlackWhite_CapitalPop_bw.png)
 <br>
-[... and a version with some grey](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day10_BlackWhite/BlackWhite_CapitalPop_grey.png)
+[... and a version with some grey](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day10_BlackWhite/BlackWhite_CapitalPop_grey.png)
 
-### Day 11: [Elevation](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day11_Elevation)
-![./Day11_Elevation/Elevation_Rayshader_custom.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day11_Elevation/Elevation_Rayshader_custom.png)
+### Day 11: [Elevation](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day11_Elevation)
+![./Day11_Elevation/Elevation_Rayshader_custom.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day11_Elevation/Elevation_Rayshader_custom.png)
 <br>
-[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day11_Elevation/Elevation_Rayshader_custom_HQ.png) and [another version using a different custom texture palette](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day11_Elevation/Elevation_Rayshader_custom_HQ.png) and [another version using a different custom texture palette](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day11_Elevation/Elevation_Rayshader_custom_v2_SD.png)
 
-### Day 12: [Movement](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day12_Movement)
-![./Day12_Movement/Movement_BerlinByBike.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day12_Movement/Movement_BerlinByBike.png)
+### Day 12: [Movement](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day12_Movement)
+![./Day12_Movement/Movement_BerlinByBike.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day12_Movement/Movement_BerlinByBike.png)
 
-### Day 13: [Tracks](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day13_Tracks)
-![./Day13_Tracks/Tracks_StorksGili.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day13_Tracks/Tracks_StorksGili.png)
+### Day 13: [Tracks](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day13_Tracks)
+![./Day13_Tracks/Tracks_StorksGili.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day13_Tracks/Tracks_StorksGili.png)
 <br>
 [Read the paper!](https://doi.org/10.1111/1365-2656.12898)
 
-### Day 14: [Boundaries](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day14_Boundaries)
-![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
+### Day 14: [Boundaries](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day14_Boundaries)
+![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
 
-### Day 15: [Names](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day15_Names)
-![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day15_Names/Names_BerlinRoads.png)
-[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day15_Names/Names_BerlinRoads_HQ.png)
+### Day 15: [Names](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day15_Names)
+![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads_HQ.png)
 
-### Day 16: [Places](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day16_Places)
-![./Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day16_Places/Places_ExtremesEarth.png)
+### Day 16: [Places](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day16_Places)
+![./Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day16_Places/Places_ExtremesEarth.png)
 
-### Day 17: [Zones](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day17_Zones)
-![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day17_Zones/Zones_TimezonesEarth.png)
-[... and another version with filled countries only](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day17_Zones/Zones_TimezonesEarth_countries.png)
+### Day 17: [Zones](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day17_Zones)
+![./Day17_Zones/Zones_TimezonesEarth.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day17_Zones/Zones_TimezonesEarth.png)
+[... and another version with filled countries only](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day17_Zones/Zones_TimezonesEarth_countries.png)
 
-### Day 18: [Globe](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day18_Globe)
-![./Day18_Globe/Globe_Projections.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day18_Globe/Globe_Projections.png)
+### Day 18: [Globe](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day18_Globe)
+![./Day18_Globe/Globe_Projections.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day18_Globe/Globe_Projections.png)
 
-### Day 19: [Urban](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day19_Urban)
-![./Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)<br>
-![./Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day19_Urban/Urban_GlobalUrbanLands.png)<br>
-[... and another version of the "light map" without land masses](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas.png)<br>
+### Day 19: [Urban](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day19_Urban)
+![./Day19_Urban/Urban_GlobalUrbanAreas_bg.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas_bg.png)<br>
+![./Day19_Urban/Urban_GlobalUrbanLands.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day19_Urban/Urban_GlobalUrbanLands.png)<br>
+[... and another version of the "light map" without land masses](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day19_Urban/Urban_GlobalUrbanAreas.png)<br>
 
-### Day 20: [Rural](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day20_Rural)
-![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day20_Rural/Rural_BerlinRuralAreas.png)
-[... and a green version without roads](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
+### Day 20: [Rural](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day20_Rural)
+![./Day20_Rural/Rural_BerlinRuralAreas.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day20_Rural/Rural_BerlinRuralAreas.png)
+[... and a green version without roads](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day20_Rural/Rural_BerlinRuralAreas_v2.png)
 
-### Day 21: [Environment](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day21_Environment)
-![./Day21_Environment/Environment_NationalParksUS.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day21_Environment/Environment_NationalParksUS.png)
+### Day 21: [Environment](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day21_Environment)
+![./Day21_Environment/Environment_NationalParksUS.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day21_Environment/Environment_NationalParksUS.png)
 
-### Day 22: [Built Environment](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day22_BuiltEnvironment)
-![./Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
-![./Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png)
-[... and here is a blank version of Moabit showing the buildings only](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
+### Day 22: [Built Environment](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day22_BuiltEnvironment)
+![./Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BerlinBuildings.png)
+![./Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit.png)
+[... and here is a blank version of Moabit showing the buildings only](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day22_BuiltEnvironment/BuiltEnv_BuildingsMoabit_blank.png)
 
-### Day 23: [Population](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day23_Population)
-![./Day23_Population/Population_ChangeGlobal_diff.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day23_Population/Population_ChangeGlobal_diff.png)
-[... and a version showing the projections for the coming 5 years](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day23_Population/Population_ChangeGlobal.png) and [for 20-year periods from 1950 to 2050](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day23_Population/Population_ChangeGlobal_facet.png)
+### Day 23: [Population](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day23_Population)
+![./Day23_Population/Population_ChangeGlobal_diff.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day23_Population/Population_ChangeGlobal_diff.png)
+[... and a version showing the projections for the coming 5 years](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day23_Population/Population_ChangeGlobal.png) and [for 20-year periods from 1950 to 2050](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day23_Population/Population_ChangeGlobal_facet.png)
 
-### Day 24: [Statistics](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day24_Statistics)
-![./Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day24_Statistics/Statistics_MalariaDeaths.png)
+### Day 24: [Statistics](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day24_Statistics)
+![./Day24_Statistics/Statistics_MalariaDeaths.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day24_Statistics/Statistics_MalariaDeaths.png)
 
-### Day 25: [Climate](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day25_Climate)
-![./Day25_Climate/Climate_KoppenGeiger.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day25_Climate/Climate_KoppenGeiger.png)
+### Day 25: [Climate](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day25_Climate)
+![./Day25_Climate/Climate_KoppenGeiger.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day25_Climate/Climate_KoppenGeiger.png)
 
-### Day 26: [Hydrology](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day26_Hydrology)
-![./Day26_Hydrology/Hydrology_WorldRivers.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day26_Hydrology/Hydrology_WorldRivers.png)
+### Day 26: [Hydrology](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day26_Hydrology)
+![./Day26_Hydrology/Hydrology_WorldRivers.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day26_Hydrology/Hydrology_WorldRivers.png)
 
-### Day 27: [Resources](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day27_Resources)
-![./Day27_Resources/Resources_eMobilityBerlin.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day27_Resources/Resources_eMobilityBerlin.png)
+### Day 27: [Resources](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day27_Resources)
+![./Day27_Resources/Resources_eMobilityBerlin.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day27_Resources/Resources_eMobilityBerlin.png)
 
-### Day 28: [Resources](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day28_Funny)
+### Day 28: [Resources](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day28_Funny)
 *coming soon?* 🤷
 
-### Day 29: [Experimental](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day29_Experimental)
-![./Day29_Experimental/Experimental_PopIntervals.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2021/master/contributions/Day29_Experimental/Experimental_PopIntervals.png)
+### Day 29: [Experimental](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day29_Experimental)
+![./Day29_Experimental/Experimental_PopIntervals.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day29_Experimental/Experimental_PopIntervals.png)
 
-### Day 30: [Home](https://github.com/z3tt/30DayMapChallenge2021/tree/master/contributions/Day30_Home)
+### Day 30: [Home](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day30_Home)
 *coming soon?* 🤷
 
 ***
