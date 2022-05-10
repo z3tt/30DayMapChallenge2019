@@ -17,7 +17,7 @@ My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/
 
 </div>
 
-![./data/30daymapchallenge.jpg](https://github.com/z3tt/30DayMapChallenge2019/blob/master/data/30daymapchallenge.jpg)
+![./data/30daymapchallenge.jpg](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/main/data/30daymapchallenge.jpg)
 
 <details>
   <summary><b>List of All Contributions</b> (click to expand)</summary>
