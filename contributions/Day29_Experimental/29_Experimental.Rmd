@@ -100,6 +100,9 @@ x25 <-
 
 ggsave(here::here("contributions", "Day29_Experimental", "Experimental_PopIntervals.pdf"), 
        plot = x25, width = 18, height = 11, device = cairo_pdf)
+
+ggsave(here::here("contributions", "Day29_Experimental", "Experimental_PopIntervals.svg"), 
+       plot = x25, width = 18, height = 11)
 ```
 
 ```{r facet, fig.width = 18, fig.height = 30}

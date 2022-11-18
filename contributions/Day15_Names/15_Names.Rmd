@@ -11,7 +11,7 @@ editor_options:
 ---
   
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, warning = F)
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
 ```
 
 ```{r prep}
@@ -41,8 +41,7 @@ theme_update(
                               color = "grey60",
                               size = 9,
                               hjust = 0,
-                              lineheight = 1.5,
-                              margin = margin(0, 12, 6, 200)),
+                              lineheight = 1.5),
   legend.position = "top",
   legend.box.spacing = unit(0.2, "cm"), 
   legend.key = element_rect(fill = NA, color = NA), 
@@ -94,18 +93,21 @@ sf_bln_roads_classified %>%
             show.legend = "point") + 
      scale_color_manual(
        values = c(
-       "#f6cf71",  ## Straße
-       "#019868",  ## Weg
-       "#ec0b88",  ## Allee
-       "#651eac",  ## Damm
-       "#e18a1e",  ## Platz
-       "#9dd292",  ## Chaussee
-       "#2b7de5",  ## Water
-       "#c6c6c6"), ## Andere
-     name = NULL,
-     labels = c("STRAßE    ", "WEG    ", "ALLEE    ", "DAMM    ", 
-                "PLATZ    ", "CHAUSSEE    ", "WATER¹    ", "OTHER²")
-     ) +
+         "#f6cf71",  ## Straße
+         "#019868",  ## Weg
+         "#ec0b88",  ## Allee
+         "#651eac",  ## Damm
+         "#e18a1e",  ## Platz
+         "#9dd292",  ## Chaussee
+         "#2b7de5",  ## Water
+         "#c6c6c6"   ## Andere
+       ), 
+       name = NULL,
+       labels = c("STRAßE    \n(street)    ", "WEG    \n(path)    ", "ALLEE    \n(alley)    ", "DAMM    \n(dam)    ",
+                  "PLATZ    \n(square)    ", "CHAUSSEE    \n(avenue)    ", "WATER-    \nRELATED¹    ", "OTHER\nNAMES²")
+       # labels = c("STRAßE    ", "WEG    ", "ALLEE    ", "DAMM    ",
+       #            "PLATZ    ", "CHAUSSEE    ", "WASSER¹    ", "ANDERE²")
+    ) +
     guides(color = guide_legend(title.position = "top", 
                                 title.hjust = 0.5, nrow = 1,
                                 label.position = "right",
@@ -113,14 +115,21 @@ sf_bln_roads_classified %>%
     annotate("text", x = 13.45, y = 52.344, 
              hjust = 0.6, vjust = 1,
              label = "Visualization by Cédric Scherer  •  Data by OpenStreetMap",
+             #label = "Visualisierung: Cédric Scherer  •  Daten: OpenStreetMap",
              family = "Oswald", 
              size = 4.5, 
              color = "grey60") + 
     labs(title = "NAMES OF ROADS IN BERLIN",
-         caption = '¹ Road type names that are related to close-by water bodies, i.e. **"See"**, **"Ufer"**, and **"Steg"**<br>² Other road type names include for example **"Promenade"**, **"Pfad"**, **"Ring"**, **"Zeile"**, **"Gasse"**, **"Brücke"**, **"Graben"**, and **Hof**')
+         caption = '¹ Road type names that are related to close-by water bodies, i.e. **"See" (lake)**, **"Ufer" (shore)**, and **"Steg" (footbridge)**<br>² Other road type names include, e.g. **"Promenade" (esplanade)**, **"Pfad" (trail)**, **"Ring" (ring road)**, **"Brücke" (bridge)**, **"Graben" (trench)**, and **"Hof" (courtyard)**') +
+    theme(plot.caption = element_markdown(margin = margin(0, 12, 6, 120)))
+    # labs(title = "BERLINER STRAßENNAMEN",
+    #      caption = '¹ Straßennamen, die mit Gewässern in Verbindung stehen, z.B. **"See"**, **"Ufer"** und **"Steg"**<br>² Andere Namen für Straßen, z.B **"Promenade"**, **"Pfad"**, **"Ring"**, **"Zeile"**, **"Gasse"**, **"Brücke"**, **"Graben"** und **"Hof"**') +
+    # theme(plot.caption = element_markdown(margin = margin(0, 12, 6, 220)))
 
-ggsave(here::here("contributions", "Day15_Names", "Names_BerlinRoads.pdf"), 
-       width = 12, height = 11.63, device = cairo_pdf)
+ggsave(here::here("contributions", "Day15_Names", "Names_BerlinRoads_en.pdf"),
+       width = 12, height = 11.67, device = cairo_pdf)
+# ggsave(here::here("contributions", "Day15_Names", "Names_BerlinRoads_de.pdf"),
+#        width = 12, height = 11.615, device = cairo_pdf)
 ```
 
 ***

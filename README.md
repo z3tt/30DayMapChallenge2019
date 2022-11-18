@@ -103,8 +103,8 @@ My contributions to the first [#30DayMapChallenge](https://twitter.com/tjukanov/
 ![./Day14_Boundaries/Boundaries_GlobalNeighbors.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day14_Boundaries/Boundaries_GlobalNeighbors.png)
 
 ### Day 15: [Names](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day15_Names)
-![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads.png)
-[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads_HQ.png)
+![./Day15_Names/Names_BerlinRoads.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads_en.png)
+[Here is the high resolution version](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day15_Names/Names_BerlinRoads_en_hd.png)
 
 ### Day 16: [Places](https://github.com/z3tt/30DayMapChallenge2019/tree/master/contributions/Day16_Places)
 ![./Day16_Places/Places_ExtremesEarth.png](https://raw.githubusercontent.com/z3tt/30DayMapChallenge2019/master/contributions/Day16_Places/Places_ExtremesEarth.png)
